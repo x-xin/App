@@ -1,0 +1,85 @@
+button[disabled], html input[disabled], html select[disabled]{background-color:#eee}
+input,button,select,textarea{outline:none}
+textarea{resize:none}
+
+.ui-form-stauts(@radius: true; @boxSizing: true){
+	background:#fff;
+	border:1px solid #ddd;
+	color:#333;
+	
+	.radius(@radius) when (@radius = true){
+		.border-radius(2px);
+	}
+	.boxSizing(@boxSizing) when (@boxSizing = true){
+		.box-sizing();
+	}
+	.radius(@radius);
+	.boxSizing(@boxSizing);
+	//.transition(All 0.3s ease-in-out);
+
+	&:hover,&:focus{
+		border-color:#eee;
+		.box-shadow(0, 0, 3px, #eee);
+	}
+}
+
+.ui-form{
+	.ui-labelBox,label{
+		float:left;position:relative;min-width:20px;min-height:32px;
+		.ui-label{cursor:pointer;}
+	}
+
+	.ui-label{
+		display:block;
+		height:32px;
+		line-height:32px;
+		float:left;
+		text-align:right;
+		color:#333;
+		white-space: nowrap;
+		em{
+			color:#ff0;
+			margin-right: 5px;
+			vertical-align: middle;
+		}
+	}
+}
+
+/* input */
+.ui-input{
+	height:14px;line-height:14px;padding:8px 10px;float:left;
+	background: #fafafa;
+	.ui-form-stauts();
+
+	&.ui-disable{
+	    background-color: #F4F4F4;
+	    cursor: not-allowed;
+	}
+}
+.ui-input-disable{background:#eee;cursor:not-allowed;}
+
+/* textarea */
+.ui-textarea {
+	padding:10px;float:left;
+	
+	.ui-form-stauts();
+}
+.ui-textarea-disable{background:#eee;cursor:not-allowed;}
+
+/* select */
+.ui-select{
+	height:30px;line-height:28px;padding:0 25px 0 10px;vertical-align:middle;float:left;margin-right: 5px;position:relative;cursor: pointer;
+	.ui-form-stauts(true,false);
+	
+	i{
+		position:absolute;
+		top:13px;
+		right:8px;
+		.arrow(#ccc, down, 5px);
+	}
+}
+.ui-select-disable{background:#eee;cursor:not-allowed;}
+
+/* checkbox&radio */
+.ui-checkbox,.ui-radio{position:absolute;left:0;top:11px;width:13px;height:13px}
+.ui-checkbox-label,.ui-radio-label{margin-left:16px !important; text-align: left !important; width: auto !important;}

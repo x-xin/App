@@ -1,0 +1,297 @@
+
+.iconSprite(){
+	background-image: url(../img/sprite.png);
+	.rem(background-size, 192, 185);
+}
+.icon-arrow(@isHover: false){
+
+	.hover (@a) when (@a = false) {
+		.iconSprite();
+		.rem(width, 16);
+		.rem(height, 26);
+	}
+	.hover(@isHover);
+	
+	.rem(background-position, -117, -152);
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+	.iconSprite();
+}
+.icon-arrow{
+	.rem(background-position, -117, -152);
+	.rem(width, 16);
+	.rem(height, 26);
+}
+
+
+.iconSprite(){
+	background-image: url(../img/sprite.png);
+	.rem(background-size, 192, 185);
+}
+.icon-dine(@isHover: false){
+
+	.hover (@a) when (@a = false) {
+		.iconSprite();
+		.rem(width, 38);
+		.rem(height, 32);
+	}
+	.hover(@isHover);
+	
+	.rem(background-position, -152, -50);
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+	.iconSprite();
+}
+.icon-dine{
+	.rem(background-position, -152, -50);
+	.rem(width, 38);
+	.rem(height, 32);
+}
+
+
+.iconSprite(){
+	background-image: url(../img/sprite.png);
+	.rem(background-size, 192, 185);
+}
+.icon-hotel(@isHover: false){
+
+	.hover (@a) when (@a = false) {
+		.iconSprite();
+		.rem(width, 40);
+		.rem(height, 40);
+	}
+	.hover(@isHover);
+	
+	.rem(background-position, -152, 0);
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+	.iconSprite();
+}
+.icon-hotel{
+	.rem(background-position, -152, 0);
+	.rem(width, 40);
+	.rem(height, 40);
+}
+
+
+.iconSprite(){
+	background-image: url(../img/sprite.png);
+	.rem(background-size, 192, 185);
+}
+.icon-phone(@isHover: false){
+
+	.hover (@a) when (@a = false) {
+		.iconSprite();
+		.rem(width, 33);
+		.rem(height, 33);
+	}
+	.hover(@isHover);
+	
+	.rem(background-position, -152, -92);
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+	.iconSprite();
+}
+.icon-phone{
+	.rem(background-position, -152, -92);
+	.rem(width, 33);
+	.rem(height, 33);
+}
+
+
+.iconSprite(){
+	background-image: url(../img/sprite.png);
+	.rem(background-size, 192, 185);
+}
+.icon-phone2(@isHover: false){
+
+	.hover (@a) when (@a = false) {
+		.iconSprite();
+		.rem(width, 33);
+		.rem(height, 33);
+	}
+	.hover(@isHover);
+	
+	.rem(background-position, 0, -152);
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+	.iconSprite();
+}
+.icon-phone2{
+	.rem(background-position, 0, -152);
+	.rem(width, 33);
+	.rem(height, 33);
+}
+
+
+.iconSprite(){
+	background-image: url(../img/sprite.png);
+	.rem(background-size, 192, 185);
+}
+.icon-question(@isHover: false){
+
+	.hover (@a) when (@a = false) {
+		.iconSprite();
+		.rem(width, 32);
+		.rem(height, 32);
+	}
+	.hover(@isHover);
+	
+	.rem(background-position, -43, -152);
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+	.iconSprite();
+}
+.icon-question{
+	.rem(background-position, -43, -152);
+	.rem(width, 32);
+	.rem(height, 32);
+}
+
+
+.iconSprite(){
+	background-image: url(../img/sprite.png);
+	.rem(background-size, 192, 185);
+}
+.icon-tag(@isHover: false){
+
+	.hover (@a) when (@a = false) {
+		.iconSprite();
+		.rem(width, 22);
+		.rem(height, 26);
+	}
+	.hover(@isHover);
+	
+	.rem(background-position, -85, -152);
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+	.iconSprite();
+}
+.icon-tag{
+	.rem(background-position, -85, -152);
+	.rem(width, 22);
+	.rem(height, 26);
+}
+
+
+.iconSprite(){
+	background-image: url(../img/sprite.png);
+	.rem(background-size, 192, 185);
+}
+.icon-travels_shop(@isHover: false){
+
+	.hover (@a) when (@a = false) {
+		.iconSprite();
+		.rem(width, 66);
+		.rem(height, 66);
+	}
+	.hover(@isHover);
+	
+	.rem(background-position, 0, -76);
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+	.iconSprite();
+}
+.icon-travels_shop{
+	.rem(background-position, 0, -76);
+	.rem(width, 66);
+	.rem(height, 66);
+}
+
+
+.iconSprite(){
+	background-image: url(../img/sprite.png);
+	.rem(background-size, 192, 185);
+}
+.icon-travels_tag(@isHover: false){
+
+	.hover (@a) when (@a = false) {
+		.iconSprite();
+		.rem(width, 66);
+		.rem(height, 66);
+	}
+	.hover(@isHover);
+	
+	.rem(background-position, -76, -76);
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+	.iconSprite();
+}
+.icon-travels_tag{
+	.rem(background-position, -76, -76);
+	.rem(width, 66);
+	.rem(height, 66);
+}
+
+
+.iconSprite(){
+	background-image: url(../img/sprite.png);
+	.rem(background-size, 192, 185);
+}
+.icon-travels_text(@isHover: false){
+
+	.hover (@a) when (@a = false) {
+		.iconSprite();
+		.rem(width, 66);
+		.rem(height, 66);
+	}
+	.hover(@isHover);
+	
+	.rem(background-position, -76, 0);
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+	.iconSprite();
+}
+.icon-travels_text{
+	.rem(background-position, -76, 0);
+	.rem(width, 66);
+	.rem(height, 66);
+}
+
+
+.iconSprite(){
+	background-image: url(../img/sprite.png);
+	.rem(background-size, 192, 185);
+}
+.icon-travels_viewpoint(@isHover: false){
+
+	.hover (@a) when (@a = false) {
+		.iconSprite();
+		.rem(width, 66);
+		.rem(height, 66);
+	}
+	.hover(@isHover);
+	
+	.rem(background-position, 0, 0);
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+	.iconSprite();
+}
+.icon-travels_viewpoint{
+	.rem(background-position, 0, 0);
+	.rem(width, 66);
+	.rem(height, 66);
+}
+

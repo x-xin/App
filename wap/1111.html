@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		dialog[open]::backdrop { 
+		  animation: fadeToNearBlack 1s forwards; 
+		}
+		dialog::backdrop { 
+		  background: rgba(0,0,0,0.9); 
+		}
+	</style>
+</head>
+<body>
+	<dialog id="dialog">
+		<h3>Are you sure?</h3>
+		<p>You’ve pressed a big red button. It might do… something.
+		<div>
+			<button id="okay">Okay, go ahead</button>
+			<button id="cancel">Cancel</button>
+		</div>
+	</dialog>
+	adfad
+	<script type="text/javascript">
+		var dialog = document.getElementById('dialog')
+		//dialog.show()
+		dialog.showModal();
+		//document.getElementById('dialog').close()
+	</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+.page-shop-detail{
+	.shopDetail{
+		.block{
+			.rem(padding, 0, 25);
+		}
+			.mark{
+				.rem(font-size, 24);
+				position:relative;
+				
+				span{
+					.rem(padding-left, 45);
+					
+					&:nth-child(3){
+						.rem(padding-left, 30);
+					}
+					
+					em{
+						color:#ff5745;
+						.rem(margin-left, 10);
+					}
+				}
+				.icon-dine{
+					position:absolute;left:0;left:0
+				}
+			}
+			.address{
+				color:#bbb;
+				.rem(font-size, 22);
+				.rem(margin, 16, 0, 28);
+			}
+			
+			.author{
+				.rem(padding-top, 10);
+				.rem(font-size, 24);
+				em{
+					color:#999;
+					.rem(padding-left, 10)
+				}
+			}
+			
+			.introduce{
+				.rem(font-size, 24);
+				.rem(line-height, 34);
+				
+				img{
+					max-width:100%;
+					.rem(margin, 10, 0);
+				}
+			}
+	}
+	.shopList{
+		.rem(padding, 0, 17);
+		
+		.title{
+			border-left-style:solid;
+			border-left-color:#00b7ff;
+			
+			.rem(margin, 22, 0);
+			.rem(margin-left, 8);
+			.rem(padding-left, 5);
+			.rem(border-left-width, 6);
+			.rem(font-size, 28);
+			.rem(line-height, 28);
+		}
+		
+		li{
+			width:25%;float:left;text-align:center;
+			
+			.box-sizing();
+			.rem(padding, 0, 8, 20);
+			
+			img{
+				width:100%;
+				.border-radius(5);
+			}
+			
+			&:nth-child(4n + 1){
+				//.rem(margin-left, -8);
+			};
+
+			&:nth-child(4n + 4){
+				//.rem(margin-right, -8);
+			};	
+		}
+	}
+}

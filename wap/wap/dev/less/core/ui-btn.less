@@ -1,0 +1,112 @@
+/* ���ð�ť������ɫ���߿���ʽ */
+.ui-btn-stauts(@bgCol, @bgHoverCol, @fontCol, @fontHoverCol:'', @borderCol:'', @borderHoverCol:'', @isTransition:''){
+	.fontHoverCol (@fontHoverCol) when (@fontHoverCol = '') {
+		@fontHoverCol:@fontCol;
+	}
+	.borderCol (@borderCol) when (@borderCol = '') {
+		@borderCol:@bgCol;
+	}
+	.borderHoverCol (@borderHoverCol) when (@borderHoverCol = '') {
+		@borderHoverCol:@bgCol;
+	}
+	.isTransition (@isTransition) when (@isTransition = '') {
+		transition:background ease 0.3s;
+	}
+	.isTransition(@isTransition);
+	.fontHoverCol(@fontHoverCol);
+	.borderCol(@borderCol);
+	.borderHoverCol(@borderHoverCol);
+	
+	background:@bgCol;
+	border:1px solid @borderCol;
+	color:@fontCol;
+	
+	height:32px;
+	line-height:32px;
+	display:inline-block;
+	font-size:12px;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	cursor:pointer;
+	
+	&:hover{
+		background:@bgHoverCol;
+		color:@fontHoverCol;
+		border:1px solid @borderHoverCol;
+		text-decoration:none;
+	}
+	&:active{
+		.box-shadow(0, 3px, 5px, .1, inset);
+	}
+}
+
+/*��ͨ��ť*/
+.ui-btn{
+
+	.ui-btn-stauts( #ff5745, #ff5745, #fff );
+	.border-radius(2px);
+	padding:0 15px;
+	
+	.icon{
+		display:inline-block;
+		
+		&:first-child{
+			padding:0 3px 0 0;
+		}
+		&:last-child{
+			padding:0 0 0 3px;
+		}
+	}
+}
+.ui-btn-small{
+
+	.ui-btn-stauts( #ff5745, #ff5745, #fff );
+	.border-radius(2px);
+	padding:0 10px;
+
+	height:20px;
+	line-height:20px;
+	
+	a{color:#fff}
+	
+	.icon{
+		color:#333;
+		margin:0 3px 0 0;
+	}
+	
+	&:hover .icon{
+		color:#fff;
+	}
+}
+.ui-btn-big{
+	.ui-btn-stauts( #ff5745, #ff5745, #fff );
+	.border-radius(2px);
+	
+	a{color:#fff}
+	padding:0;
+	height:48px;
+	line-height:48px;
+	width:158px;
+    font-size: 18px;
+}
+// largeBig
+.ui-btn-largeBig{
+	.ui-btn-stauts( #ff5745, #ff5745, #fff );
+	.border-radius(2px);
+	
+	font-size:14px;
+	a{color:#fff}
+	padding:0;
+	height:40px;
+	line-height:40px;
+	width:165px;
+}
+.ui-btn-cancel{
+	background:#eee;
+	border:1px solid #ddd;
+	color:#333;
+}
+.ui-btn-disable{
+	
+}

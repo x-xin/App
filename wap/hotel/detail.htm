@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html lang="zh-lang">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="http://192.168.1.99/wap/wap/dest/css/styles.css?v=222" media="all"/>
+	<script src="http://192.168.1.99/wap/wap/dest/js/metareset.js"></script>
+	<script src="http://192.168.1.99/wap/wap/dest/js/ajax.js"></script>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+</head>
+<body class="page-line-detail page-hotel-detail">
+
+	<div class="lt-block detail" id="j-detail">
+		<ul class="tab fn-clear" id="j-tab">
+			<li class="cur">酒店简介</li>
+			<li>酒店设施</li>
+			<li>交通指南</li>
+			<li>预订须知</li>
+		</ul>
+		<div id="j-wrap">
+			<div class="wrap first">
+				<div class="title">酒店简介</div>
+				<div class="main">		鼓浪屿岛上海岸线蜿蜒曲折，坡绥沙细的天然海滨浴场环布四周，鬼斧神工的碎石奇趣天成，令人遐想万千。岛上岗峦起伏，错落有致。最高峰日光岩是厦门的象征，有未上日光岩等于没到厦门之说，鼓浪屿四季如春，气候宜人，树木繁茂，鸟语花香，空气清新，今人心旷神怡；山和海相拥，自然造化和人工雕凿相映成趣，日光岩、菽庄花园、皓月园、毓园更为园中园胜景。
+				</div>
+			</div>
+			<div class="wrap">
+				<div class="title">酒店设施</div>
+				<div class="main">
+					<dl>
+						<dt>服务设施：</dt>
+						<dd>免费Wifi、免费停车、商务中心、会议室、中餐厅、邮政服务、叫车服务、叫醒服务、洗衣服务、送餐服务、旅游服务、租车服务、专职行李员、行李寄存、票务服务、有电梯、前台保险柜、免费旅游交通图、茶室、商品部、安全消防系统、公共区域闭路电视监控系统、残障人客房、电子结账系统、大堂免费报纸、无烟楼层、无障碍通道、24小时热水、棋牌室</dd>
+					</dl>
+					<dl>
+						<dt>休闲设施：</dt>
+						<dd>茶室、棋牌室</dd>
+					</dl>
+					<dl>
+						<dt>餐饮服务：</dt>
+						<dd>自助餐厅：可容纳120人同时就餐</dd>
+						<dd>自助餐厅：可容纳120人同时就餐</dd>
+					</dl>
+					<dl>
+						<dt>客房服务：</dt>
+						<dd>国际长途电话、空调、免费提供一次性洗漱用品、电热水壶、拖鞋、电视、独立写字台、吹风机、多种规格电源插座、110V电压插座、迷你酒吧、免费瓶装水、电子磁卡门锁、座椅、雨伞、针线包、熨斗/熨衣板、多功能充电器、可做无烟处理、220V电压插座、沙发、室内卫生间、室内洗浴间、淋浴、国内长途电话</dd>
+					</dl>
+					<dl>
+						<dt>支持信用卡：</dt>
+						<dd>Visacard、牡丹卡、金穗卡、长城卡、龙卡、太平洋卡、东方卡、万事达卡、运通卡、大莱卡、JCBcard</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="wrap">
+				<div class="title">交通指南</div>
+				<div class="main">
+					酒店位于思明区梧村街道大厝山68号，毗邻厦门市最热商圈之一莲坂商圈、火车站商圈。交通便利，闹中取静，独揽大厝山秀丽自然风光。
+					距离厦门站约1.7公里
+					距离高崎站约11公里
+					距离厦门高崎国际机场约10.6公里
+					距离厦门会展中心3.5公里
+				</div>
+			</div>
+			<div class="wrap last">
+				<div class="title">预订须知</div>
+				<div class="main">
+					温馨提示：根据厦门市公安机关规定，旅客须持本人有效身份证登记入住，若有未成年人请携带户口本及证件照片登记入住。谢谢您的理解和支持。
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<script>
+	var setFixed    = function(target){
+						target.style.position = 'fixed';
+					},
+		removeFixed = function(target){
+						target.style.position = 'absolute';
+					},
+		target      = document.getElementById('j-tab'),
+		targetItem  = target.children,
+		wrapItem    = document.querySelectorAll('#j-wrap .wrap'),
+		scrollFn    = function(e){
+						var bodyScrollTop   = document.body.scrollTop,
+							targetOffsetTop = document.getElementById('j-detail').offsetTop;
+							
+						if( bodyScrollTop > targetOffsetTop ){
+							setFixed(target);
+						}else{
+							removeFixed(target);
+						}
+					};
+
+	scrollFn();	
+	
+	for(var i = 0, len = targetItem.length; i < targetItem.length; i++){
+		(function(i){
+			var item  = targetItem[i],
+				wItem = wrapItem[i];
+			item.addEventListener('touchend', function(){
+				for(var j=0; j<len; j++){
+					targetItem[j].className = '';
+					wrapItem[j].style.display  = 'none';
+				}
+				item.className = 'cur';
+				wItem.style.display  = 'block';
+				
+				scrollFn();
+				
+				if( document.body.scrollTop + document.getElementById('j-detail').offsetTop > document.body.scrollHeight ){
+					document.body.scrollTop = document.getElementById('j-detail').offsetTop;
+					removeFixed(target);
+				}
+				
+			});
+			
+		}(i));
+	}
+	
+	
+	
+	//window.addEventListener('touchmove', scrollFn, false);
+	
+	window.addEventListener('scroll', scrollFn, false);
+
+	</script>
+</body>
+</html>

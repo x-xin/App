@@ -1,0 +1,19 @@
+.ui-pagination{
+	
+	padding:20px;
+	
+	.ui-floatCenter{height:32px}
+
+	.text{display:block;height:16px;line-height:16px;padding:7px 11px;background:#fafafa;border:1px solid @col-form-border;}
+	.num{
+		display:block;height:16px;line-height:16px;padding:7px 11px;
+		&.cur{
+			.text();
+		}
+	}
+	a,span{float:left;margin:0 5px}
+	span{cursor:default;}
+	.prev,.next{background:@col-pagination-disable;}
+	.prev{border-left:1px solid @col-form-border;}
+	
+}

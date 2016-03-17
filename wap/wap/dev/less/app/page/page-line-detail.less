@@ -1,0 +1,260 @@
+.page-line-detail{
+
+	#list{
+		
+		background:#f60;
+		position:fixed;
+		top:0;
+		left:0;
+		z-index:999;
+	}
+	
+	.lt-block{
+		.rem(padding-bottom, 24);
+		.rem(margin-bottom, 20);
+		border-top:1px solid #e9e9e9;
+		border-bottom:1px solid #e9e9e9;
+	}
+	
+	.price{
+		.header{
+			position:relative;
+			
+			.rem(height, 320);
+			
+			img{height:100%;}
+			
+			.bar{
+				width:100%;position:absolute;bottom:0;left:0;
+			}
+				.fn-clear{
+					width:100%;position:relative;z-index:1;color:#fff;
+					
+					.rem(height, 46);
+					.rem(line-height, 46);
+					.rem(font-size, 24);
+					.box-sizing();
+					.rem(padding, 0, 24);
+					
+					span,em{float:left}
+					em{
+						.rem(padding, 0, 16);
+					}
+				}
+				.bar-bg{
+					width:100%;background:#000;position:absolute;bottom:0;left:0;z-index:0;
+					.rem(height, 46);
+					.opacity(0.7);
+				}
+		}
+		
+		.title{
+			.rem(font-size, 30);
+			.rem(line-height, 36);
+			.rem(padding, 18, 24, 26);
+		}
+		
+		.priceInfo{
+			
+			.rem(padding, 0, 24);
+			
+			.rem(font-size, 24);
+			
+			em{
+				.rem(font-size, 22);
+				color:#ff5745;
+			}
+			
+			i{
+				.rem(font-size, 36);
+			}
+		}
+		
+		.remark{
+			color:#999;
+			
+			.rem(padding, 30, 24, 0, 24);
+			.rem(font-size, 24);
+			
+			em{
+				color:#00b7ff;
+				.rem(padding, 0, 10);
+			}
+			
+			.fn-right{
+				position:relative;
+			}
+			
+				.icon-question{
+					position:absolute;
+					
+					.rem(top, 4);
+					.rem(left, -35);
+				}
+		}
+	}
+	
+	.contact{
+		li{
+			border-bottom:1px solid #e9e9e9;
+			
+			.rem(padding, 0, 24);
+			
+			&.last{
+				border-bottom:0 none;
+			}
+		}
+			span{
+				display:block;
+				.rem(font-size, 24);
+				.rem(padding, 26, 0)
+			}
+			div{
+				color:#999;
+				.rem(line-height, 30);
+				.rem(font-size, 22);
+			}
+	}
+	
+	.detail{
+		position:relative;
+		
+		.rem(padding-top, 88);
+
+		.tab{
+			width:100%;border-bottom:1px solid #e9e9e9;position:absolute;top:0;left:0;z-index:99;background:#fff;
+			
+			.rem(font-size, 24);
+			.rem(padding, 0, 24);
+			.box-sizing();
+			
+			li{
+				float:left;width:25%;text-align:center;
+				
+				.rem(height, 88);
+				.rem(line-height, 88);
+				
+				&.cur{
+					color:#00b7ff;
+					border-bottom:2px solid #00b7ff;
+					.rem(height, 86);
+					.rem(line-height, 86);
+				}
+			}
+		}
+		
+		.wrap{
+			//border-bottom:1px solid #e4e4e4;
+			display:none;
+			
+			.rem(font-size, 24);
+			.rem(padding, 0, 24, 30);
+			
+			&.first{
+				display:block;
+			}
+			&.last{
+				border-bottom:0 none;
+			}
+		}
+		
+			.title{
+				.rem(font-size, 28);
+				.rem(padding, 30, 0, 20);
+			}
+			
+			table{
+				.rem(margin-top, 30);
+			}
+				td{
+					border:1px solid #e9e9e9;
+					.rem(padding, 15);
+					&.first{
+						background:#f5f5f5;
+						
+						.rem(width, 110);
+						
+						div{
+							position:relative;overflow:hidden;
+							
+							.rem(height, 28);
+							.rem(line-height, 28);
+							.rem(font-size, 22);
+							.rem(padding-left, 44);
+							.rem(margin-left, 16);
+
+							[class^=icon-]{
+								position:absolute;top:0;left:0;
+							}
+						}
+					}
+				}
+			
+			/* 行程安排 */
+			.travel{
+				border-left:1px solid #b7ebff;position:relative;
+				
+				.rem(padding-left, 30);
+				.rem(margin-left, 18);
+				
+				&.first{
+					table{
+						.rem(margin-bottom, 30);
+					}
+				}
+			}
+			
+				.tag{
+					overflow:hidden;color:#00b7ff;
+					
+					.rem(font-size, 24);
+					.rem(height, 24);
+					.rem(line-height, 24);
+					.rem(padding-bottom, 22);
+				}
+			
+					.icon-tag{
+						position:absolute;
+						
+						.rem(top, -1);
+						.rem(left, -13);
+					}
+		/* 不再提醒 */	
+		.fee{}
+			dl{
+				.rem(padding, 0, 0, 20);
+			}
+			dt{
+				color:#666;
+				.rem(font-size, 24);
+				.rem(padding, 0, 0, 10);
+			}
+	}
+	
+	.btnWrap{
+		background:#fff;position:relative;
+		
+		.telWrap a{
+			float:left;
+			
+			.rem(font-size, 30);
+			.rem(height, 88);
+			.rem(line-height, 88);
+			.rem(padding-left, 86);
+		}	
+			.icon-phone2{
+				position:absolute;
+				.rem(top, 30);
+				.rem(left, 28);
+			}
+		.ui-btn{
+			float:right;
+			
+			.rem(font-size, 30);
+			.rem(width, 250);
+			.rem(height, 88);
+			.rem(line-height, 88);
+		}
+	}
+
+}

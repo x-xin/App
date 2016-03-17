@@ -1,0 +1,82 @@
+.page-user_travels-detail{
+	.lt-block{
+		.rem(padding, 24);
+	}
+		.header{
+			.title{
+				.rem(font-size, 30);
+			}
+			.author{
+				.rem(font-size, 24);
+				color:#999;
+			}
+		}	
+		
+		.main{}	
+			.travel{
+				border-left-style:solid;border-left-color:#ebebeb;
+
+				.rem(margin, 30, 0, 30, 25);
+				.rem(padding-left, 50);
+				.rem(border-left-width, 2);
+			}
+				.item{
+					position:relative;
+					
+					.rem(margin-bottom, 20);
+					
+					.title{
+						.rem(height, 66);
+						.rem(line-height, 66);
+						
+					}
+				}
+					.contents{
+						border-style:solid;border-color:#ebebeb;
+						
+						.rem(border-width, 2);
+						.rem(height, 118);
+						.rem(padding, 30);
+						.border-radius(10);
+						
+						[class^="icon"]{
+							.rem(top, 52);
+						}
+						
+						&.text{
+							border-style:dashed;
+						}
+					}
+					.info{
+						float:right;
+						.rem(width, 314);
+					}
+					img{
+						height:100%;float:left;
+					}
+					[class^="icon"]{
+						top:0;
+						position:absolute;
+						.rem(left, -84);
+					}
+					dt{
+						.rem(font-size, 30);
+						.rem(line-height, 30);
+						.rem(padding-bottom, 12);
+					}
+					dd{
+						.rem(font-size, 24);
+						em{color:#ff5745}
+						
+						&.hidden{
+							overflow:hidden;
+							.rem(height, 80);
+							.rem(line-height, 28);
+						}
+						
+						&:nth-child(3){
+							color:#999;
+							.rem(margin-top, 12);
+						}
+					}
+}

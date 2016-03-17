@@ -1,0 +1,80 @@
+.page-travel_guide-detail{
+	.price{ 
+		dl{
+			.rem(padding, 0, 24, 10);
+		}
+		dt{
+			.rem(font-size, 28);
+			.rem(padding-bottom, 10);
+		}
+		dd{
+			.rem(font-size, 24);
+		}
+		.remark{
+			.rem(padding, 18, 24, 0);
+		}
+	}
+	
+	.detail{
+		.rem(padding-top, 30);
+		
+				
+		.travel{
+			.rem(margin-left, 10);
+		}
+			
+			.travelDetail{
+				&:nth-child(2){
+					.titleWrap{
+						.rem(margin-top, 8);
+					}
+				}
+			}
+
+				.titleWrap{
+					.rem(margin, 38, 0, 30);
+				}
+				
+					.title{
+						float:left;padding:0;
+						
+						em{
+							display:inline-block;background:#d0d0d0;color:#fff;text-align:center;
+							.rem(width, 28);
+							.rem(height, 28);
+							.rem(line-height, 28);
+							.rem(font-size, 26);
+							.rem(margin-right, 12);
+							.border-radius(28);
+						}
+					}
+					
+					.more{
+						float:right;position:relative;
+						.rem(height, 28);
+						.rem(line-height, 28);
+						.rem(font-size, 26);
+						.rem(padding-right, 20);
+						
+						.icon-arrow{
+							position:absolute;
+							right:0;
+							.rem(top, 1)
+						}
+					}
+				
+				.imgWrap{
+					.rem(margin-bottom, 30);
+					img{
+						width:30%;float:left;
+						&:nth-child(2){
+							margin:0 5%;
+						}
+					}
+				}
+				
+				.contents{
+					.rem(font-size, 24);
+				}
+	}
+}

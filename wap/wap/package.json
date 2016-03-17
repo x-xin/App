@@ -1,0 +1,21 @@
+{
+  "name": "erp",
+  "version": "0.1.0",
+  "scripts": {
+    "gulp": "gulp",
+    "build": "npm run gulp"
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-clean": "*",
+    "gulp-concat": "*",
+    "gulp-less": "*",
+    "gulp-minify-css": "*",
+    "gulp-plumber": "^1.0.1",
+    "gulp-jshint": "*",
+    "gulp-uglify": "*",
+    "gulp.spritesmith": "*",
+	"gulp-cache":  "*",
+	"gulp-imagemin":  "*"
+  }
+}
