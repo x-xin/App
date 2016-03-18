@@ -3,7 +3,7 @@ var gulp        = require('gulp'),
 	uglify      = require('gulp-uglify'),
 	minifycss   = require('gulp-minify-css'),
 	sprite      = require('gulp.spritesmith'),
-	// imagemin    = require('gulp-imagemin'),
+	imagemin    = require('gulp-imagemin'),
 	clean       = require('gulp-clean'),
 	plumber     = require('gulp-plumber'),
 	concat      = require('gulp-concat'),
@@ -82,7 +82,11 @@ gulp.task('copy:js', function(){
 gulp.task('copy:images', function(){
 	gulp
 		.src(path.dev+'img/default/**/*.{png,jpg,jpeg,gif}')
-
+		.pipe(cache(imagemin({
+			optimizationLevel: 3,
+			progressive: true,
+			interlaced: true
+		})))
 		.pipe(gulp.dest(path.dest+'img/'));
 });
 
@@ -103,7 +107,11 @@ gulp.task('sprite:png', ['clean:imagesSprite'], function () {
 						}));
 		spriteData
 			.img
-
+			.pipe(imagemin({
+				optimizationLevel: 3,
+				progressive: true,
+				interlaced: true
+			}))
 			.pipe(gulp.dest(path.dest+'img/'));
 		
 		spriteData
@@ -123,7 +131,11 @@ gulp.task('sprite:jpg', ['clean:imagesSprite'], function () {
 						}));
 		spriteData
 			.img
-
+			.pipe(imagemin({
+				optimizationLevel: 3,
+				progressive: true,
+				interlaced: true
+			}))
 			.pipe(gulp.dest(path.dest+'img/'));
 		
 		spriteData

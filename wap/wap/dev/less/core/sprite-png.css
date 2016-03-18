@@ -1,7 +1,7 @@
 
 .iconSprite(){
 	background-image: url(../img/sprite.png);
-	.rem(background-size, 192, 185);
+	.rem(background-size, 261, 192);
 }
 .icon-arrow(@isHover: false){
 
@@ -12,7 +12,7 @@
 	}
 	.hover(@isHover);
 	
-	.rem(background-position, -117, -152);
+	.rem(background-position, -130, -152);
 }
 
 [class^="icon-"],
@@ -20,7 +20,7 @@
 	.iconSprite();
 }
 .icon-arrow{
-	.rem(background-position, -117, -152);
+	.rem(background-position, -130, -152);
 	.rem(width, 16);
 	.rem(height, 26);
 }
@@ -28,7 +28,7 @@
 
 .iconSprite(){
 	background-image: url(../img/sprite.png);
-	.rem(background-size, 192, 185);
+	.rem(background-size, 261, 192);
 }
 .icon-dine(@isHover: false){
 
@@ -39,7 +39,7 @@
 	}
 	.hover(@isHover);
 	
-	.rem(background-position, -152, -50);
+	.rem(background-position, -50, -152);
 }
 
 [class^="icon-"],
@@ -47,7 +47,7 @@
 	.iconSprite();
 }
 .icon-dine{
-	.rem(background-position, -152, -50);
+	.rem(background-position, -50, -152);
 	.rem(width, 38);
 	.rem(height, 32);
 }
@@ -55,7 +55,7 @@
 
 .iconSprite(){
 	background-image: url(../img/sprite.png);
-	.rem(background-size, 192, 185);
+	.rem(background-size, 261, 192);
 }
 .icon-hotel(@isHover: false){
 
@@ -66,7 +66,7 @@
 	}
 	.hover(@isHover);
 	
-	.rem(background-position, -152, 0);
+	.rem(background-position, 0, -152);
 }
 
 [class^="icon-"],
@@ -74,7 +74,7 @@
 	.iconSprite();
 }
 .icon-hotel{
-	.rem(background-position, -152, 0);
+	.rem(background-position, 0, -152);
 	.rem(width, 40);
 	.rem(height, 40);
 }
@@ -82,7 +82,7 @@
 
 .iconSprite(){
 	background-image: url(../img/sprite.png);
-	.rem(background-size, 192, 185);
+	.rem(background-size, 261, 192);
 }
 .icon-phone(@isHover: false){
 
@@ -93,7 +93,7 @@
 	}
 	.hover(@isHover);
 	
-	.rem(background-position, -152, -92);
+	.rem(background-position, -228, -43);
 }
 
 [class^="icon-"],
@@ -101,7 +101,7 @@
 	.iconSprite();
 }
 .icon-phone{
-	.rem(background-position, -152, -92);
+	.rem(background-position, -228, -43);
 	.rem(width, 33);
 	.rem(height, 33);
 }
@@ -109,7 +109,7 @@
 
 .iconSprite(){
 	background-image: url(../img/sprite.png);
-	.rem(background-size, 192, 185);
+	.rem(background-size, 261, 192);
 }
 .icon-phone2(@isHover: false){
 
@@ -120,7 +120,7 @@
 	}
 	.hover(@isHover);
 	
-	.rem(background-position, 0, -152);
+	.rem(background-position, -228, 0);
 }
 
 [class^="icon-"],
@@ -128,7 +128,7 @@
 	.iconSprite();
 }
 .icon-phone2{
-	.rem(background-position, 0, -152);
+	.rem(background-position, -228, 0);
 	.rem(width, 33);
 	.rem(height, 33);
 }
@@ -136,7 +136,7 @@
 
 .iconSprite(){
 	background-image: url(../img/sprite.png);
-	.rem(background-size, 192, 185);
+	.rem(background-size, 261, 192);
 }
 .icon-question(@isHover: false){
 
@@ -147,7 +147,7 @@
 	}
 	.hover(@isHover);
 	
-	.rem(background-position, -43, -152);
+	.rem(background-position, -228, -86);
 }
 
 [class^="icon-"],
@@ -155,7 +155,7 @@
 	.iconSprite();
 }
 .icon-question{
-	.rem(background-position, -43, -152);
+	.rem(background-position, -228, -86);
 	.rem(width, 32);
 	.rem(height, 32);
 }
@@ -163,7 +163,7 @@
 
 .iconSprite(){
 	background-image: url(../img/sprite.png);
-	.rem(background-size, 192, 185);
+	.rem(background-size, 261, 192);
 }
 .icon-tag(@isHover: false){
 
@@ -174,7 +174,7 @@
 	}
 	.hover(@isHover);
 	
-	.rem(background-position, -85, -152);
+	.rem(background-position, -98, -152);
 }
 
 [class^="icon-"],
@@ -182,7 +182,7 @@
 	.iconSprite();
 }
 .icon-tag{
-	.rem(background-position, -85, -152);
+	.rem(background-position, -98, -152);
 	.rem(width, 22);
 	.rem(height, 26);
 }
@@ -190,7 +190,115 @@
 
 .iconSprite(){
 	background-image: url(../img/sprite.png);
-	.rem(background-size, 192, 185);
+	.rem(background-size, 261, 192);
+}
+.icon-travels_comment(@isHover: false){
+
+	.hover (@a) when (@a = false) {
+		.iconSprite();
+		.rem(width, 30);
+		.rem(height, 25);
+	}
+	.hover(@isHover);
+	
+	.rem(background-position, -228, -167);
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+	.iconSprite();
+}
+.icon-travels_comment{
+	.rem(background-position, -228, -167);
+	.rem(width, 30);
+	.rem(height, 25);
+}
+
+
+.iconSprite(){
+	background-image: url(../img/sprite.png);
+	.rem(background-size, 261, 192);
+}
+.icon-travels_distance(@isHover: false){
+
+	.hover (@a) when (@a = false) {
+		.iconSprite();
+		.rem(width, 29);
+		.rem(height, 29);
+	}
+	.hover(@isHover);
+	
+	.rem(background-position, -228, -128);
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+	.iconSprite();
+}
+.icon-travels_distance{
+	.rem(background-position, -228, -128);
+	.rem(width, 29);
+	.rem(height, 29);
+}
+
+
+.iconSprite(){
+	background-image: url(../img/sprite.png);
+	.rem(background-size, 261, 192);
+}
+.icon-travels_gray(@isHover: false){
+
+	.hover (@a) when (@a = false) {
+		.iconSprite();
+		.rem(width, 66);
+		.rem(height, 66);
+	}
+	.hover(@isHover);
+	
+	.rem(background-position, -152, 0);
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+	.iconSprite();
+}
+.icon-travels_gray{
+	.rem(background-position, -152, 0);
+	.rem(width, 66);
+	.rem(height, 66);
+}
+
+
+.iconSprite(){
+	background-image: url(../img/sprite.png);
+	.rem(background-size, 261, 192);
+}
+.icon-travels_hotel(@isHover: false){
+
+	.hover (@a) when (@a = false) {
+		.iconSprite();
+		.rem(width, 66);
+		.rem(height, 66);
+	}
+	.hover(@isHover);
+	
+	.rem(background-position, -76, -76);
+}
+
+[class^="icon-"],
+[class*=" icon-"]{
+	.iconSprite();
+}
+.icon-travels_hotel{
+	.rem(background-position, -76, -76);
+	.rem(width, 66);
+	.rem(height, 66);
+}
+
+
+.iconSprite(){
+	background-image: url(../img/sprite.png);
+	.rem(background-size, 261, 192);
 }
 .icon-travels_shop(@isHover: false){
 
@@ -217,7 +325,7 @@
 
 .iconSprite(){
 	background-image: url(../img/sprite.png);
-	.rem(background-size, 192, 185);
+	.rem(background-size, 261, 192);
 }
 .icon-travels_tag(@isHover: false){
 
@@ -228,7 +336,7 @@
 	}
 	.hover(@isHover);
 	
-	.rem(background-position, -76, -76);
+	.rem(background-position, -76, 0);
 }
 
 [class^="icon-"],
@@ -236,7 +344,7 @@
 	.iconSprite();
 }
 .icon-travels_tag{
-	.rem(background-position, -76, -76);
+	.rem(background-position, -76, 0);
 	.rem(width, 66);
 	.rem(height, 66);
 }
@@ -244,7 +352,7 @@
 
 .iconSprite(){
 	background-image: url(../img/sprite.png);
-	.rem(background-size, 192, 185);
+	.rem(background-size, 261, 192);
 }
 .icon-travels_text(@isHover: false){
 
@@ -255,7 +363,7 @@
 	}
 	.hover(@isHover);
 	
-	.rem(background-position, -76, 0);
+	.rem(background-position, -152, -76);
 }
 
 [class^="icon-"],
@@ -263,7 +371,7 @@
 	.iconSprite();
 }
 .icon-travels_text{
-	.rem(background-position, -76, 0);
+	.rem(background-position, -152, -76);
 	.rem(width, 66);
 	.rem(height, 66);
 }
@@ -271,7 +379,7 @@
 
 .iconSprite(){
 	background-image: url(../img/sprite.png);
-	.rem(background-size, 192, 185);
+	.rem(background-size, 261, 192);
 }
 .icon-travels_viewpoint(@isHover: false){
 
