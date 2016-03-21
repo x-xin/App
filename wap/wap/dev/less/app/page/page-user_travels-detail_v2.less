@@ -1,5 +1,7 @@
 .page-user_travels-detail_v2{	
 	.contents{
+
+	    overflow: hidden;
 		
 		[class^="icon"]{
 			.rem(top, 85);
@@ -13,6 +15,26 @@
 		        float:right;
 		        .rem(font-size, 28);
 		        color:#00b7ff;
+
+		        &.signined{
+
+		            position:relative;
+		            .rem(top, -20);
+		            .rem(left, 85);
+
+		            .rem(padding, 5, 60);
+		            .rem(font-size, 20);
+		            color:#ffffff;
+		            background-color:#19c566;
+
+			        transform:rotate(45deg);
+					-ms-transform:rotate(45deg); 	/* IE 9 */
+					-moz-transform:rotate(45deg); 	/* Firefox */
+					-webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+					-o-transform:rotate(45deg); 	/* Opera */
+
+
+		        }
 		    }
 
 		    .distance{
