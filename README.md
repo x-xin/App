@@ -1,2 +1,3 @@
 # App
-app wap
+
+ This is an application APP in Xinxin
