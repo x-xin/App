@@ -6,16 +6,16 @@
     "build": "npm run gulp"
   },
   "devDependencies": {
-    "gulp": "*",
-    "gulp-clean": "*",
-    "gulp-concat": "*",
-    "gulp-less": "*",
-    "gulp-minify-css": "*",
-    "gulp-plumber": "^1.0.1",
-    "gulp-jshint": "*",
-    "gulp-uglify": "*",
-    "gulp.spritesmith": "*",
-  	"gulp-cache":  "*",
-  	"gulp-imagemin":  "*"
+    "gulp": "*",                     // gulp
+    "gulp-clean": "*",               // gulp-clean       ->    清楚文件或目录
+    "gulp-concat": "*",              // gulp-concat      ->    合并文件
+    "gulp-less": "*",                // gulp-less        ->    将LESS编译成CSS
+    "gulp-minify-css": "*",          // gulp-minify-css  ->    压缩css
+    "gulp-plumber": "^1.0.1",        // gulp-plumber     ->    任务错误中断自动重传
+    "gulp-jshint": "*",              // gulp-jshint      ->    js语法检查
+    "gulp-uglify": "*",              // gulp-uglify      ->    js压缩
+    "gulp.spritesmith": "*",         // gulp.spritesmith ->    切片合并成雪碧图的工具
+  	"gulp-cache":  "*",              // gulp-cache       ->    没有修改的图片直接从缓存文件读取
+  	"gulp-imagemin":  "*"            // gulp-imagemin    ->    png, jpeg 图片压缩(保证质量压缩)
   }
 }
