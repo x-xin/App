@@ -6,15 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="http://192.168.1.99/wap/wap/dest/css/styles.css?v=222" media="all"/>
 	<script src="http://192.168.1.99/wap/wap/dest/js/all.js"></script>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body class="page-travel_guide-detail_v2 page-user_travels-detail_animation_v2">
-
+    
 	<div class="lt-block">
 		<div class="header">
 			<div class="title">最美鹭岛厦门4日游，高铁旅客版</div>
 			<div class="remark">推荐时长：4日</div>
 		</div>
-		<div class="main">
+		<div class="main" id="j-main">
 			<div class="travel">
 				<div class="item">
 					<i class="icon-travels_tag"></i>
@@ -23,7 +24,7 @@
 				<div class="item">
 					<div class="contents">
 					    <i class="icon-travels_gray"></i>
-						<div class="title">鼓浪屿<div class="signin signined">已签到</div></div>
+						<div class="title">鼓浪屿<div class="signin">签到</div></div>
 						<div class="imgWrap fn-clear">
 							<img src="http://192.168.1.99/wap/img/3.jpg" alt=""/>
 							<img src="http://192.168.1.99/wap/img/3.jpg" alt=""/>
@@ -102,6 +103,42 @@
 
 		</div>
 	</div>
+
+	<!-- animation -->
+    <div class="animation-wrap" id="j-animation-wrap">
+		<button class="effect-animation">
+			<i class="icon-assign_success">签到成功</i>
+		</button>
+	</div>
+
+	<script>
+		var target     =    $("#j-main .signin"),
+		    anima      =    $("#j-animation-wrap");
+		    animaChind =    anima.children("button.effect-animation");
+
+		for (var i = 0; i < target.length; i++) {
+			(function(i){
+				var item = target[i];
+				item.addEventListener("touchend",function(){
+
+					var _this = $(this);
+					if (!_this.hasClass("signined")) {
+
+						anima.css('display','block');
+						animaChind.addClass("animation-click");
+
+						animaChind.bind("webkitAnimationEnd",function(){
+
+							anima.css('display','none');
+							_this.html("已签到").addClass("signined");
+
+					    });
+					}
+
+				});
+			})(i);
+		}
+	</script>
 	
 </body>
 </html>
