@@ -46,13 +46,13 @@
 
 		    &.comment{
 		        .rem(padding-left, 40);
-		        .rem(line-height, 80);
+		        .rem(line-height, 90);
 		        .rem(font-size, 28);
 		        position:relative;
 
 		        [class^="icon"]{
 		            position:absolute;
-		            .rem(top, 27);
+		            .rem(top, 32);
 		            .rem(left,0);
 		        }
 
@@ -71,19 +71,19 @@
 
 	@-webkit-keyframes effect-anim-1 {
 		0%, 100% {
-			opacity: 0;
+			.opacity(0);
 		}
 		40%, 60% {
-			opacity: 1;
+			.opacity(1);
 		}
 	}
 
 	@keyframes effect-anim-1 {
 		0%, 100% {
-			opacity: 0;
+			.opacity(0);
 		}
 		40%, 60% {
-			opacity: 1;
+			.opacity(1);
 		}
 	}
 
@@ -190,7 +190,9 @@
 			    .rem(border-radius, 90);
 			    .rem(line-height, 190);
 			    .rem(letter-spacing, 2);
+
 			    border: 1px solid #fff;
+			    .rem(border-width,2);
 			    background-color: #19c566;
 			    color: #fff;
 			    .rem(font-size, 24);

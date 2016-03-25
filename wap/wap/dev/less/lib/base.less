@@ -34,8 +34,9 @@ body,button,input,select,textarea{
 input,select,textarea{
 	font-size:100%;
 }
-/* 按钮鼠标已过去为受刑 */
+/* 按钮鼠标移过去为手型 */
 button{cursor: pointer;}
+
 /* 去掉各Table  cell 的边距并让其边重合 */
 table{
 	border-collapse:collapse;border-spacing:0;
@@ -97,13 +98,22 @@ sub, sup {
 }
 sup {top: -0.5em;}
 sub {bottom: -0.25em;}
+
 /* 正常字体*/
 i{font-style:normal}
 
+/*  
+    1.去除android a/button/input标签被点击时产生的边框 
+    2.去除ios a标签被点击时产生的半透明灰色背景   
+*/
+a,button,input{
+	-webkit-tap-highlight-color:rgba(255,0,0,0);
+}
 
 /* 让链接在 hover 状态下显示下划线 */
 a:hover {
 	/* text-decoration:underline; */
+	border: none;
 }
 
 /* 默认不显示下划线，保持页面简洁 */
