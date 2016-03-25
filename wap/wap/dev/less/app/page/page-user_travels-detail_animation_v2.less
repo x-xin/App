@@ -34,7 +34,6 @@
 					-webkit-transform:rotate(45deg); /* Safari 和 Chrome */
 					-o-transform:rotate(45deg); 	/* Opera */
 
-
 		        }
 		    }
 
@@ -46,13 +45,13 @@
 
 		    &.comment{
 		        .rem(padding-left, 40);
-		        .rem(line-height, 80);
+		        .rem(line-height, 90);
 		        .rem(font-size, 28);
 		        position:relative;
 
 		        [class^="icon"]{
 		            position:absolute;
-		            .rem(top, 27);
+		            .rem(top, 32);
 		            .rem(left,0);
 		        }
 
@@ -71,59 +70,63 @@
 
 	@-webkit-keyframes effect-anim-1 {
 		0%, 100% {
-			opacity: 0;
+			.opacity(0);
 		}
 		40%, 60% {
-			opacity: 1;
+			.opacity(1);
 		}
 	}
 
 	@keyframes effect-anim-1 {
 		0%, 100% {
-			opacity: 0;
+			.opacity(0);
 		}
 		40%, 60% {
-			opacity: 1;
+			.opacity(1);
 		}
 	}
 
 	@-webkit-keyframes effect-anim-2 {
 		0% {
+					transform: scale3d(1.4, 1.4, 1);
 			-webkit-transform: scale3d(1.4, 1.4, 1);
-			transform: scale3d(1.4, 1.4, 1);
+			
 		}
 		100% {
+					transform: scale3d(3, 3, 1);
 			-webkit-transform: scale3d(3, 3, 1);
-			transform: scale3d(3, 3, 1);
+			
 		}
 	}
 
 	@keyframes effect-anim-2 {
 		0% {
+		            transform: scale3d(1.4, 1.4, 1);
 			-webkit-transform: scale3d(1.4, 1.4, 1);
-			transform: scale3d(1.4, 1.4, 1);
+			
 		}
 		100% {
+					transform: scale3d(3, 3, 1);
 			-webkit-transform: scale3d(3, 3, 1);
-			transform: scale3d(3, 3, 1);
+			
 		}
 	}
 
 	.animation-controll{
-		-webkit-animation-name: effect-anim-2, effect-anim-1;
-		animation-name:effect-anim-2, effect-anim-1;
-
-		-webkit-animation-duration: 1.2s;
-		animation-duration: 1.2s;
-
-		-webkit-animation-iteration-count: 3;
-		animation-iteration-count: 3;
-
+		                   animation-name: effect-anim-2, effect-anim-1;
+			       -webkit-animation-name: effect-anim-2, effect-anim-1;
+			        
+	                   animation-duration: 1.2s;
+			   -webkit-animation-duration: 1.2s;
+			
+                animation-iteration-count: 1;
+		-webkit-animation-iteration-count: 1; 
+		
+                animation-timing-function: ease-out;
 		-webkit-animation-timing-function: ease-out;
-		animation-timing-function: ease-out;
-
-		-webkit-animation-fill-mode: forwards;
-		animation-fill-mode: forwards;
+		
+		              animation-fill-mode: forwards;
+		      -webkit-animation-fill-mode: forwards;	
 	}
 
 	.effect-animation-before-and-after{
@@ -160,8 +163,10 @@
 			color: #286aab;
 			.rem(font-size, 28);
 			overflow: visible;
+
 			-webkit-transition: color 0.7s;
 			        transition: color 0.7s;
+			        
 			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
 			&.animation-click{
@@ -190,7 +195,9 @@
 			    .rem(border-radius, 90);
 			    .rem(line-height, 190);
 			    .rem(letter-spacing, 2);
+
 			    border: 1px solid #fff;
+			    .rem(border-width,2);
 			    background-color: #19c566;
 			    color: #fff;
 			    .rem(font-size, 24);

@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="zh-lang">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="http://192.168.1.99/wap/wap/dest/css/styles.css?v=222" media="all"/>
+	<script src="http://192.168.1.99/wap/wap/dest/js/all.js"></script>
+
+</head>
+<body class="page-hotel-detail">
+	
+	<div class="lt-block equipment">
+
+	    <div id='j-slider' class='swipe'>
+		  <div class='swipe-wrap'>
+		    <div class="fn-left"><img src="/wap/img/Swipe1.jpg" alt=""></div>
+		    <div class="fn-left"><img src="/wap/img/Swipe2.jpg" alt=""></div>
+		    <div class="fn-left"><img src="/wap/img/Swipe3.jpg" alt=""></div>
+		  </div>
+		</div>
+		<nav class="swipe-nav">
+		    <ul id="j-swipe-nav">
+				<li class="on"></li>
+				<li class=""></li>
+				<li class=""></li>
+		    </ul>
+		</nav>
+
+		<div class="message fn-clear">
+			<div class="title">福州大酒店</div>
+			<div class="star fn-left">
+				<i class="icon-hotel-star"></i>
+				<i class="icon-hotel-star"></i>
+				<i class="icon-hotel-star"></i>
+				<i class="icon-hotel-star"></i>
+				<i class="icon-hotel-star"></i>
+			</div>
+			<div class="phone fn-right">
+				<i class="icon-hotel-phone"></i>
+				0595-6723888
+			</div>
+		</div>
+		<div class="address">
+			<i class="icon-travels_distance"></i>
+			福州斗东路1号（斗东路与八一七中路交汇处）
+			<i class="icon-arrow"></i>
+		</div>
+		<ul class="equipmentlist fn-clear">
+			<li><i class="icon-hotel-wifi"></i>WiFi</li>
+			<li><i class="icon-hotel-park"></i>停车场</li>
+			<li><i class="icon-hotel-gym"></i>健身房</li>
+			<li><i class="icon-hotel-cbd"></i>商务中心</li>
+			<li><i class="icon-hotel-metting"></i>会议室</li>
+			<li><i class="icon-hotel-restaurant"></i>餐厅</li>
+			<li><i class="icon-hotel-safe"></i>保险箱</li>
+ 			<li><i class="icon-hotel-spa"></i>SPA</li>
+			<li><i class="icon-hotel-beauty"></i>美容美发</li>
+			<li><i class="icon-hotel-creditcard"></i>信用卡</li> 
+		</ul>
+	</div>
+	
+	<div class="lt-block productshow">
+
+	    <div class="title">房型展示</div>
+
+	    <div class="item">
+			<img src="http://192.168.1.99/wap/img/hotel1.jpg" alt=""/>
+			<div class="info">
+				<dl>
+					<dt>高级标准间</dt>
+					<dd>双床1.5M&nbsp;&nbsp;|&nbsp;&nbsp;WiFi&nbsp;&nbsp;|&nbsp;&nbsp;含早餐</dd>
+					<dd><em>￥</em>230</dd>
+				</dl>
+				<a class="btn_a" href="#" title="">预订</a>
+			</div>
+		</div>
+
+		<div class="item">
+			<img src="http://192.168.1.99/wap/img/hotel1.jpg" alt=""/>
+			<div class="info">
+				<dl>
+					<dt>高级大床房</dt>
+					<dd>双床1.5M&nbsp;&nbsp;|&nbsp;&nbsp;WiFi&nbsp;&nbsp;|&nbsp;&nbsp;含早餐</dd>
+					<dd><em>￥</em>666</dd>
+				</dl>
+				<a class="btn_a" href="#" title="">预订</a>
+			</div>
+		</div>
+
+		<div class="item">
+			<img src="http://192.168.1.99/wap/img/hotel1.jpg" alt=""/>
+			<div class="info">
+				<dl>
+					<dt>高级幼儿间</dt>
+					<dd>单床1.0M&nbsp;&nbsp;|&nbsp;&nbsp;WiFi&nbsp;&nbsp;|&nbsp;&nbsp;含早餐</dd>
+					<dd><em>￥</em>188</dd>
+				</dl>
+				<a class="btn_a" href="#" title="">预订</a>
+			</div>
+		</div>
+	
+	</div>
+
+	<!-- swipe -->
+	<script src="http://cdn.bootcss.com/swipe/2.0.0/swipe.min.js"></script>
+	<script>
+		window.mySwipe = new Swipe(document.getElementById('j-slider'), {
+			startSlide: 0,
+			speed: 400,
+			auto: 3000,
+			continuous: true,
+			disableScroll: false,
+			stopPropagation: false,
+			callback: function(pos) {
+		        var i = navlist.length;
+		        while (i--) {
+		            navlist[i].className = ' ';
+		        }
+		        navlist[pos].className = 'on';
+		    }
+		    // ,transitionEnd: function(index, elem) {}
+		});
+		var navlist = document.getElementById('j-swipe-nav').getElementsByTagName('li');
+	</script>
+
+</body>
+</html>
