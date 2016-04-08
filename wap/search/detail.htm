@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html lang="zh-lang">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="http://192.168.1.99/wap/wap/dest/css/styles.css?v=222" media="all"/>
+	<script src="http://192.168.1.99/wap/wap/dest/js/all.js"></script>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</head>
+<body class="page-search-detail">
+	<div class="lt-block serarch">
+		<form action="" class="serarch-form">
+		    <span class="cityindex">
+			    <i class="citynow">福州</i>
+			    <i class="icon-search_sub"></i>
+			    <i class="line">&nbsp;|&nbsp;</i>
+		    </span>
+			<ul class="citylist fn-hide">
+				<li class="cur"><a href="javascript:;"><i class="city">福州</i><i class="icon-blue_gou"></i></a></li>
+				<li><a href="javascript:;"><i class="city">厦门</i><i></i></a></li>
+				<li><a href="javascript:;"><i class="city">泉州</i><i></i></a></li>
+				<li><a href="javascript:;"><i class="city">漳州</i><i></i></a></li>
+				<li><a href="javascript:;"><i class="city">三明</i><i></i></a></li>
+				<li><a href="javascript:;"><i class="city">龙岩</i><i></i></a></li>
+				<li><a href="javascript:;"><i class="city">莆田</i><i></i></a></li>
+				<li><a href="javascript:;"><i class="city">南平</i><i></i></a></li>
+				<li><a href="javascript:;"><i class="city">宁德</i><i></i></a></li>
+				<li><a href="javascript:;"><i class="city">平潭</i><i></i></a></li>
+			</ul>
+			<div class="serarch-input">
+				<i class="icon-search_input"></i>
+				<input type="text" placeholder="搜索目的地或线路关键词"  autocomplete="off">
+			</div>
+			<a class="search_btn" id="j-search_btn" href="javascript:;">搜索</a>
+		</form>
+	</div>
+	<div class="lt-block searchlist searchlist_first">
+	    <div class="title"><i></i><span>热门关键字</span></div>
+	    <div class="item">
+		    <a href="http://m.cncn.com/xianlu/fuzhou/zhoubian-272" title="">鼓浪屿</a>
+		    <a href="http://m.cncn.com/xianlu/fuzhou/zhoubian-53" title="">武夷山</a>
+		    <a href="http://m.cncn.com/xianlu/fuzhou/zhoubian-20888" title="">云水谣</a>
+		    <a href="http://m.cncn.com/xianlu/fuzhou/zhoubian-19" title="">永定土楼</a>
+		</div>
+		<div class="item">
+		    <a href="http://m.cncn.com/xianlu/fuzhou/zhoubian-91" title="">南靖土楼 </a>
+		    <a href="http://m.cncn.com/xianlu/fuzhou/zhoubian-12739" title="">湄洲岛</a>
+		    <a href="http://m.cncn.com/xianlu/fuzhou/zhoubian-347" title="">平潭岛</a>
+		    <a href="http://m.cncn.com/xianlu/fuzhou/zhoubian-353" title="">永泰青云山</a>
+		</div>
+		<div class="item">
+		    <a href="http://m.cncn.com/xianlu/fuzhou/zhoubian-168" title="">大金湖</a>
+		    <a href="http://m.cncn.com/xianlu/fuzhou/zhoubian-44" title="">太姥山</a>
+		    <a href="http://m.cncn.com/xianlu/fuzhou/zhoubian-166" title="">桃源洞</a>
+		    <a href="http://m.cncn.com/xianlu/fuzhou/zhoubian-30" title="">白水洋</a>
+		</div>
+		<div class="item">
+		    <a href="http://m.cncn.com/xianlu/fuzhou/zhoubian-20" title="">冠豸山</a>
+		    <a href="http://m.cncn.com/xianlu/fuzhou/zhoubian-5490" title="">雁荡山</a>
+		    <a href="http://m.cncn.com/xianlu/fuzhou/zhoubian-13" title="">古田会址</a>
+		    <a href="http://m.cncn.com#to_city" title="">更多+</a>
+		</div>
+	</div>
+	<div class="lt-block searchlist">
+		<div class="title"><i></i><span>按天数分</span></div>
+	    <div class="item">
+		    <a href="http://m.cncn.com/xianlu/fuzhou/zhoubian?daynum=1" title="">1日游</a>
+		    <a href="http://m.cncn.com/xianlu/fuzhou/zhoubian?daynum=2" title="">2日游</a>
+		    <a href="http://m.cncn.com/xianlu/fuzhou/zhoubian?daynum=3" title="">3日游</a>
+		    <a href="http://m.cncn.com/xianlu/fuzhou/zhoubian?daynum=4" title="">4日游</a>
+		</div>
+		<div class="item">
+		    <a href="http://m.cncn.com/xianlu/fuzhou/zhoubian?daynum=5" title="">5日游及以上</a>
+		    <a href="javascript:;" title=""></a>
+		    <a href="javascript:;" title=""></a>
+		    <a href="javascript:;" title=""></a>
+		</div>
+	</div>
+
+	<script>
+
+        var a1 = ['福州','厦门','泉州','漳州','三明','龙岩','莆田','南平','宁德','平潭'];
+	    var a2 = ['fuzhou','xiamen','quanzhou','zhangzhou','sanming','longyan','putian','nanping','ningde','pingtan'];
+
+		$(".cityindex").click(function(){
+			$(".citylist").hasClass("fn-hide") ? $(".citylist").removeClass("fn-hide") : $(".citylist").addClass("fn-hide");
+		});
+
+		$(".citylist").find("li").click(function(){
+			$(".citylist").addClass("fn-hide");
+			$(".citynow").text($(this).find(".city").text());
+			$(this).addClass('cur').find('i:last-child').addClass("icon-blue_gou");
+			$(this).siblings().removeClass('cur').find('i:last-child').removeClass("icon-blue_gou");
+		});
+
+		$("#j-search_btn").click(function(){
+			var cityName = a2[a1.indexOf($(".citynow").text())];
+			var url = "http://m.cncn.com/c/so.php?m=search&city_en=" + cityName + "&q=" + escape($(".serarch-input").find("input").val()); 
+			// console.log(url);
+			if($(".serarch-input").find("input").val()){
+				window.location.href = url;
+			}
+		});	
+
+	</script>
+
+</body>
+</html>
