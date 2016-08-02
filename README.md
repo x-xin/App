@@ -6,9 +6,9 @@ This is a project for mobile terminal.
 
 ### 测试环境
 
-*  安装Node、npm；
-*  npm install；
-*  Set port 80，/node_modules/browser-sync/lib/default-config.js；
+*  安装Node、npm ;
+*  npm install ;
+*  Set port 80 ,  /node_modules/browser-sync/lib/default-config.js ; 
 
 ```
     /**
@@ -16,11 +16,11 @@ This is a project for mobile terminal.
      * @type Number
      * @default 3000
      */
-    port: 80,
+    port: 80 ,
 ```
  
 ### 自动化工具
 
-*  cd wap；
-*  npm install；
-*  start run.bat；
+*  cd wap ;
+*  npm install ;
+*  start run.bat ;
