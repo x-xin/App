@@ -1,0 +1,228 @@
+.topic-vote{
+    .rem(margin-bottom,100);
+
+    .all{
+        text-align: center;
+        line-height: 1.75rem;
+        color: #999;
+    }
+
+    .vote-city{
+        .rem(height,88);
+        background-color: #fff;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 8;
+
+        h3{
+            .rem(padding,0,24);
+            .rem(line-height,88);
+            .rem(font-size,30);
+            color: #666;
+            background-color: #fff;
+            border-bottom: 1px solid #e9e9e9;
+            position: relative;
+            z-index: 103;
+            em{
+                .rem(margin-right,40);
+                color: #00b7ff;
+                i{
+                    &.down{
+                        .arrow(#aaacae,down,5px);
+                        position: relative;
+                        .rem(top,25);
+                        .rem(left,10);
+                    }
+                    &.up{
+                        .arrow(#00b7ff,up,5px);
+
+                        position: relative;
+                        .rem(top,-20);
+                        .rem(left,10);
+                    }
+                    
+                }
+            }
+        }
+    }
+    .city-list,.area-list{
+        display: none;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        .rem(top,88);
+        left: 0;
+
+        ul{
+            display: block;
+            .rem(padding,10,14);
+            .fn-clear();
+            background-color: #fff;
+            position: relative;
+            z-index: 101;
+        }
+
+        li{
+            .fn-left();
+            width: 25%;
+
+            span{
+                display: block;
+                .rem(margin,10);
+                text-align: center;
+                .rem(height,58);
+                .rem(line-height,60);
+                border:1px solid #cdcdcd;
+                .rem(font-size,26);
+                color: #666;
+                .border-radius(8);
+                &.cur{
+                    background-color: #e5f8ff;
+                    color: #01b7ff;
+                    border-color: #00b7ff;
+                }
+            }
+        }
+    }
+
+    .bg{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 100
+    }
+
+
+    .vote-list{
+        display: block;
+        .fn-clear();
+        .rem(padding,108,24,10);
+        li{
+            width: 50%;
+            .rem(margin-bottom,20);
+            .fn-left();
+            img{
+                display: block;
+                .border-radius(8,top);
+            }
+
+            h2{
+                .rem(padding,14,16,10);
+                .rem(font-size,28);
+                .rem(height,40);
+                overflow: hidden;
+                color: #333;
+                border-left: 1px solid #e9e9e9;
+                border-right: 1px solid #e9e9e9;
+            }
+
+            span{
+                display: block;
+                .rem(padding,0,16);
+                .rem(font-size,24);
+                color: #666;
+                border-left: 1px solid #e9e9e9;
+                border-right: 1px solid #e9e9e9;
+                &.ticket{
+                    .rem(padding-bottom,10);
+                }
+            }
+            button{
+                width: 100%;
+                .rem(height,60);
+                .rem(line-height,60);
+                text-align: center;
+                border: none;
+                background-color: #ff5745;
+                .border-radius(8,bottom);
+                position: relative;
+                i{
+                    display: inline-block;
+                    .rem(width,72);
+                    .rem(height,72);
+                    .rem(margin-right,15);
+                    .rem(margin-top,-42);
+                    .rem(margin-left,-80);
+                    border: 4px solid #fff;
+                    .border-radius(100);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+ 
+                    .scale(.5,.5); 
+
+                    transition: all .6s;
+                    -moz-transition: all .6s;  
+                    -webkit-transition: all .6s;   
+                    -o-transition: all .6s;    
+
+                    &.vote{
+                        background-color: #fff;
+                        b{
+                            display: block;
+                            .rem(width,72);
+                            .rem(height,72);
+                            .icon-red_gou();
+                            position: relative;
+                            .rem(top,20);
+                            .rem(left,10);
+                        }
+                    }
+                }
+                label{
+                    .rem(margin-left,80);
+                    color: #fff;
+                    .rem(font-size,30);
+                }
+            }
+
+            >em{
+                display: block;
+                background-color: #fff;
+                .border-radius(8);
+                a{
+                    display: block;
+                }
+            }
+            &:nth-child(odd){
+                >em{
+                   .rem(margin-right,10); 
+                }
+            }
+            &:nth-child(even){
+                >em{
+                   .rem(margin-left,10); 
+                }
+            }
+
+        }
+    }
+
+    .vote-btn{
+        .rem(height,80);
+        .rem(padding-top,20);
+        width: 100%;
+        background-color: #00b7ff;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        
+        p{
+            text-align: center;
+            .rem(font-size,34);
+            color: #fff;
+            .rem(line-height,40);
+            &:last-child{
+                .rem(font-size,24);
+                // .rem(line-height,40);
+            }
+        }
+        &.vote-gray-btn{
+            background-color: #e6e6e6;
+        }
+    }
+}

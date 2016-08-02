@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang="zh-lang">
+<head>
+    <meta charset="utf-8">
+    <title>旅游景点</title>
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="/wap/wap/dest/css/styles.css?v=222" media="all"/>
+    <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/wap/wap/dest/js/all.js"></script>
+</head> 
+<body class="topic-article-list topic-vote-detail">
+    
+    <div class="header">
+        <img src="/wap/wap/dest/img/topic/topic-4.jpg" width="100%" height="100%">
+        <p>朱熹</p>
+    </div>
+    <div class="detail-mess">
+
+        <div class="rank">
+            <span><i class="icon-vote-rank"></i>排名：001</span>
+            <span><i class="icon-vote-num"></i>票数：100000</span>
+        </div>
+        <p>所属年代：宋朝</p>
+        <p>祖&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;籍：江西</p>
+        <p>出生&nbsp;&nbsp;&nbsp;地： 三明尤溪</p>
+        <p>所属市县：武夷山市  三明市</p>
+        <p>推荐人/单位：厦门市旅游局&nbsp;思明区旅游局</p>
+
+        <div class="btn">
+            <div id="vote"><a class="red" href="javascript:;">投票</a></div>
+            <div><a class="white" href="javascript:;">分享</a></div>
+        </div>
+
+        <a class="detail-btn" href="/wap/activity/vote/details.htm">
+            <i class="icon-detail-btn"></i>
+            历史名人详情
+            <i class="icon-topic-arrow"></i>
+        </a>
+
+    </div>
+
+    <div class="story">
+        <i></i>
+        推荐故事
+    </div>
+
+    <ul class="article-list">
+        <li>
+            <a href="/wap/activity/article/detail.htm">
+                <img src="/wap/wap/dest/img/topic/topic-2.jpg" width="100%" height="100%">
+                <h2>碧海蓝天的漳州东山岛，你是否曾经留意过留意过？</h2>
+            </a>
+            <p><span>推荐对象：东山岛</span><span>福州</span></p>
+            <p><span>by：张三</span><span>2016-6-29</span></p>
+        </li>
+        <li>
+            <a href="/wap/activity/article/detail.htm">
+                <img src="/wap/wap/dest/img/topic/topic-2.jpg" width="100%" height="100%">
+                <h2>碧海蓝天的漳州东山岛，你是否曾经留意过留意过？</h2>
+            </a>
+            <p><span>推荐对象：东山岛</span><span>福州</span></p>
+            <p><span>by：张三</span><span>2016-6-29</span></p>
+        </li>
+        <li>
+            <a href="/wap/activity/article/detail.htm">
+                <img src="/wap/wap/dest/img/topic/topic-2.jpg" width="100%" height="100%">
+                <h2>碧海蓝天的漳州东山岛，你是否曾经留意过留意过？</h2>
+            </a>
+            <p><span>推荐对象：东山岛</span><span>福州</span></p>
+            <p><span>by：张三</span><span>2016-6-29</span></p>
+        </li>
+        <li>
+            <a href="/wap/activity/article/detail.htm">
+                <img src="/wap/wap/dest/img/topic/topic-2.jpg" width="100%" height="100%">
+                <h2>碧海蓝天的漳州东山岛，你是否曾经留意过留意过？</h2>
+            </a>
+            <p><span>推荐对象：东山岛</span><span>福州</span></p>
+            <p><span>by：张三</span><span>2016-6-29</span></p>
+        </li>
+        <li>
+            <a href="/wap/activity/article/detail.htm">
+                <img src="/wap/wap/dest/img/topic/topic-2.jpg" width="100%" height="100%">
+                <h2>碧海蓝天的漳州东山岛，你是否曾经留意过留意过？</h2>
+            </a>
+            <p><span>推荐对象：东山岛</span><span>福州</span></p>
+            <p><span>by：张三</span><span>2016-6-29</span></p>
+        </li>
+    </ul>
+
+    <script>
+        $("#vote").click(function(){
+            swal({  
+                title: "投票成功",
+                // title: "一种类型一小时内只能投一次，稍作休息等下再投吧！",
+                confirmButtonText: '确定',
+                confirmButtonColor: '#fff',
+                cancelButtonText: '去抽奖',
+                // type: "warning",
+                showCancelButton: true
+            },function(isConfirm){
+                if(isConfirm){
+                    console.log("ok");
+                }else{
+                    console.log("no");
+                    window.location.href="http://roda.wang/";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

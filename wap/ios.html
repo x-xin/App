@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>判断手机是否安装了客户端</title>
+</head>
+<body>
+    <!-- <a href="#">安卓</a>
+    <br>
+    <a href="#">客户端</a> -->
+
+    <a style="font-size:1rem;" href="destination://aa.bb:80/test?p=12&d=1">跳转跳转跳转跳转跳转</a>
+
+    <!-- IOS scheme destination -->
+
+    <script>
+        (function() {
+
+            var openUrl = "http://www.baidu.com/";
+
+            var isiOS = navigator.userAgent.match('iPad')|| navigator.userAgent.match('iPhone')|| navigator.userAgent.match('iPod'),
+            isAndroid = navigator.userAgent.match('Android'),
+            isDesktop = !isiOS&&!isAndroid;
+
+            if (isiOS) {
+
+                // setTimeout(function () { window.location = "itms-apps://itunes.apple.com/app/[name]/[id]?mt=8"; },25);
+                // window.location = "[destination]://[host]?url="+openUrl;yao 
+                alert("IOS");
+            }else if(isAndroid){
+
+                // window.location = "intent://[host]/"+"url="+openUrl+"#Intent;scheme=[destination];package=[com.tourist.destination];end";
+                // window.location = "destination://com.tourist.destination:80/spot?type=1&id=123";
+                window.location.href = "destination://aa.bb:80/test?p=12&d=1";
+                alert("Android");
+
+            }else{
+
+                // window.location.href = openUrl;
+                alert("pc");
+                window.location.href = "destination://aa.bb:80/test?p=12&d=1";
+            }
+        })();
+    </script>
+
+
+</body>
+</html>

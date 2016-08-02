@@ -1,0 +1,106 @@
+.topic-home{
+
+    .lt-block{
+        // border-bottom: 1px solid #e9e9e9;
+    }
+    .header{
+        img{
+            display: block;
+        }
+    }
+
+    .menu{
+        .rem(height, 370);
+        .rem(margin,16,0,20);
+        .rem(padding, 0, 20);
+        .rem(font-size, 38);
+        li{
+            width: 50%;
+            .rem(margin-bottom,22);
+            .rem(height, 164);
+            .fn-left();
+            position: relative;
+            
+            a{
+                display: block;
+                .rem(height, 164);
+                color: #fff;
+                .rem(padding-left,30);
+                .rem(margin-right,10);
+                .rem(line-height, 164);
+                background-color: #fa7a7a;
+                .border-radius(8);
+                .box-shadow(0,2px,0,#f44e4e);
+            }
+
+            &:nth-child(2){
+                a{
+                   background-color: #fba615; 
+                    .rem(margin-left,10);
+                    .rem(margin-right,0);
+                    .box-shadow(0,2px,0,#f9830d);
+                }
+            }
+            &:nth-child(3){
+                a{
+                   background-color: #39cced; 
+                   .box-shadow(0,2px,0,#02b6d1);
+                }
+                em{
+                    .rem(width,108);
+                    .rem(top,44);
+                }
+            }
+            &:nth-child(4){
+                a{
+                   background-color: #64db5e; 
+                   .rem(margin-left,10);
+                   .rem(margin-right,0);
+                   .box-shadow(0,2px,0,#47be2f);
+                }
+                em{
+                    .rem(width,87);
+                }
+            }
+            em{
+                display: block;
+                .rem(width,95);
+                position: absolute;
+                .rem(top,35);
+                .rem(right,0);
+            }
+        }
+    }
+
+    h2{
+        &.title{
+            .rem(padding, 0,20);
+            .rem(height, 88);
+            .rem(line-height, 88);
+            border-bottom: 1px solid #e9e9e9;
+            border-top: 1px solid #e9e9e9;
+            color: #333;
+            .rem(font-size,30);
+
+            a{
+                .fn-right();
+                color: #999;
+                .rem(font-size,22);
+                i{
+                    position: relative;
+                    .rem(top,2);
+                    right: 0;
+
+                }
+            }
+
+            .icon-topic-home-news{
+                position: relative;
+                .rem(top,15);
+                left: 0px;
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html lang="zh-lang">
+<head>
+    <meta charset="utf-8">
+    <title>我的领奖信息</title>
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="/wap/wap/dest/css/styles.css?v=222" media="all"/>
+    <script src="/wap/wap/dest/js/all.js"></script>
+</head>
+<body class="topic-lottery-mess">
+    <form class="mess-form" action="POST" action="">
+        <label>
+            <span>姓名</span>
+            <input id="userName" name="userName" required pattern="^[\u4e00-\u9fa5]{0,}$" maxLength="6" placeholder="请输入您的姓名" value="王荣达">
+        </label>
+        <label>
+            <span>手机号码</span>
+            <input id="userPhone" name="phone" pattern="^1[34578][\d]{9}$" required maxLength="11" placeholder="请输入您的手机号码" value="15880910182">
+        </label>
+        <label>
+            <span>身份证号</span>
+            <input id="userNum" name="num" pattern="^\d{14,17}(\d|X)$" required minLength="15"  maxLength="18" placeholder="请输入您的身份证号" value="350521199002055030">
+        </label>
+        <input class="btn" id="j-btn" type="submit" value="保存">
+    </form>
+    <script>
+
+        var CheckIdCard={  
+            //Wi 加权因子 Xi 余数0~10对应的校验码 Pi省份代码  
+            Wi:[7,9,10,5,8,4,2,1,6,3,7,9,10,5,8,4,2],  
+            Xi:[1,0,"X",9,8,7,6,5,4,3,2],
+            Pi:[11,12,13,14,15,21,22,23,31,32,33,34,35,36,37,41,42,43,44,45,46,50,51,52,53,54,61,62,63,64,65,71,81,82,91],  
+       
+            //检验18位身份证号码出生日期是否有效  
+            //parseFloat过滤前导零，年份必需大于等于1900且小于等于当前年份，用Date()对象判断日期是否有效。  
+            brithday18:function(sIdCard){  
+                var year=parseFloat(sIdCard.substr(6,4));  
+                var month=parseFloat(sIdCard.substr(10,2));  
+                var day=parseFloat(sIdCard.substr(12,2));  
+                var checkDay=new Date(year,month-1,day);  
+                var nowDay=new Date();  
+                if (1900<=year && year<=nowDay.getFullYear() && month==(checkDay.getMonth()+1) && day==checkDay.getDate()) {  
+                    return true;  
+                };  
+            },  
+       
+            //检验15位身份证号码出生日期是否有效  
+            brithday15:function(sIdCard){  
+                var year=parseFloat(sIdCard.substr(6,2));  
+                var month=parseFloat(sIdCard.substr(8,2));  
+                var day=parseFloat(sIdCard.substr(10,2));  
+                var checkDay=new Date(year,month-1,day);  
+                if (month==(checkDay.getMonth()+1) && day==checkDay.getDate()) {  
+                    return true;  
+                };  
+            },  
+       
+            //检验校验码是否有效  
+            validate:function(sIdCard){  
+                var aIdCard=sIdCard.split("");  
+                var sum=0;  
+                for (var i = 0; i < CheckIdCard.Wi.length; i++) {  
+                    sum+=CheckIdCard.Wi[i]*aIdCard[i]; //线性加权求和  
+                };  
+                var index=sum%11;//求模，可能为0~10,可求对应的校验码是否于身份证的校验码匹配  
+                if (CheckIdCard.Xi[index]==aIdCard[17].toUpperCase()) {  
+                    return true;  
+                };  
+            },
+
+            //检验输入的省份编码是否有效  
+            province:function(sIdCard){  
+                var p2=sIdCard.substr(0,2);  
+                for (var i = 0; i < CheckIdCard.Pi.length; i++) {  
+                    if(CheckIdCard.Pi[i]==p2){  
+                        return true;  
+                    };  
+                };  
+            }  
+        }; 
+
+        userName.oninput = function(){
+            this.setCustomValidity("");
+        }
+        userName.oninvalid = function(){
+            if(this.value == ""){
+                this.setCustomValidity("姓名不能为空");
+            }else{
+                this.setCustomValidity("请准确填写姓名信息");
+            }
+        }
+
+        userPhone.oninput = function(){
+            this.setCustomValidity("");
+        }
+        userPhone.oninvalid = function(){
+            if(this.value == ""){
+                this.setCustomValidity("手机号码不能为空");
+            }else{
+                this.setCustomValidity("请准确填写手机号码");
+            }
+        }
+
+        userNum.oninput = function(){
+            this.setCustomValidity("");
+        }
+        userNum.oninvalid = function(){
+            if(this.value == ""){
+                this.setCustomValidity("身份证号不能为空");
+            }else{
+                this.setCustomValidity("请准确填写身份证号");
+            }
+        }
+    </script>
+</body>
+</html>

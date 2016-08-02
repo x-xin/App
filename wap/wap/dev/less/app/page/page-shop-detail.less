@@ -24,9 +24,29 @@
 				}
 			}
 			.address{
-				color:#bbb;
-				.rem(font-size, 22);
+				display: block;
+				
 				.rem(margin, 16, 0, 28);
+				.rem(padding-left, 70);
+				.rem(height, 90);
+				.rem(line-height, 90);
+				.rem(font-size, 24);
+				color:#666;
+				border-bottom: 1px solid #e9e9e9;
+			    border-top: 1px solid #e9e9e9;
+
+			    position: relative;
+
+			    [class$='distance']{
+			    	position: absolute;
+				    .rem(top, 30);
+				    .rem(left, 28);
+			    };
+			    [class$='arrow']{
+			    	position: absolute;
+				    .rem(top, 30);
+				    .rem(right, 28);
+			    }
 			}
 			
 			.author{
@@ -72,6 +92,12 @@
 			img{
 				width:100%;
 				.border-radius(5);
+			}
+
+			span{
+				display: block;
+				.rem(height,45);
+				text-align: left;
 			}
 			
 			&:nth-child(4n + 1){

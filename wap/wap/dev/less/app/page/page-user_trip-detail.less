@@ -1,0 +1,311 @@
+.page-user_trip-detail{
+
+    .distance{
+        margin-top:0;
+    }
+
+    .lt-block{
+        overflow: hidden;
+        >div{
+            &:nth-child(2){
+                .rem(margin-top,0);
+            }
+        }
+            
+    }
+        .comment-icon{
+            .fn-right();
+            .rem(padding, 0,24,0,10);
+            position: relative;
+            .rem(right,-24);
+            i{
+                position: relative;
+                .rem(top,6);
+            }
+        }
+    .day{
+        >p{
+
+            &:nth-child(2){
+                &::before{
+                    content: "【备忘录】";
+                    color:#333;
+                }
+            }
+
+        }
+    }
+    .number{
+        >p{
+            &:nth-child(4){
+                &::before{
+                    content: "【简介】";
+                    color:#333;
+                }
+            }
+        }
+    }
+    .hotel,.shop{
+        >p{
+            &:nth-child(3){
+                &::before{
+                    content: "【简介】";
+                    color:#333;
+                }
+            }
+            &:nth-child(4){
+                &::before{
+                    content: "";
+                    color:#333;
+                }
+            }
+        }
+    }
+
+    // animate
+    .signin{
+        display: block;
+        .rem(padding,20,0);
+        position: absolute;
+        .rem(top,15);
+        .rem(right,24);
+        text-align: right;
+        color: #00b7ff;
+
+        &.signined{
+            .rem(width,128);
+            .rem(height,128);
+            .rem(line-height,160);
+            padding: 0;
+            color: #01ce5d;
+            .rem(font-size,18);
+            border:2px solid #01ce5d;
+            .border-radius(200);
+            text-align: center;
+            .rem(top,-18);
+
+            .transform(-30deg);
+
+            &::before{
+                content: "";
+                display: block;
+                .rem(width,168);
+                .rem(height,20);
+                background-color: #f2f4f5;
+                position: absolute;
+                top: -2px;
+                left: 0;
+                z-index: 2;
+                .transform(30deg);
+
+            }
+            
+            &::after{
+                content: "";
+                display: block;
+                .rem(width,100);
+                .rem(height,100);
+                border:1px solid #01ce5d;
+                .border-radius(200);
+                position: absolute;
+                .rem(top,13);
+                .rem(left,13);
+                .icon-signin-success();
+            } 
+        }
+    }
+    div[data-signin="true"]{
+        .rem(width,128);
+        .rem(height,128);
+        .rem(line-height,160);
+        padding: 0;
+        color: #01ce5d;
+        .rem(font-size,18);
+        border:2px solid #01ce5d;
+        .border-radius(200);
+        text-align: center;
+        .rem(top,-18);
+
+        .transform(-30deg);
+
+        &::before{
+            content: "";
+            display: block;
+            .rem(width,168);
+            .rem(height,20);
+            background-color: #f2f4f5;
+            position: absolute;
+            top: -2px;
+            left: 0;
+            z-index: 2;
+            .transform(30deg);
+
+        }
+        
+        &::after{
+            content: "";
+            display: block;
+            .rem(width,100);
+            .rem(height,100);
+            border:1px solid #01ce5d;
+            .border-radius(200);
+            position: absolute;
+            .rem(top,13);
+            .rem(left,13);
+            .icon-signin-success();
+        } 
+    }
+
+
+    // assign animation Strart
+
+    @-webkit-keyframes effect-anim-1 {
+        0%, 100% {
+            .opacity(0);
+        }
+        40%, 60% {
+            .opacity(1);
+        }
+    }
+
+    @keyframes effect-anim-1 {
+        0%, 100% {
+            .opacity(0);
+        }
+        40%, 60% {
+            .opacity(1);
+        }
+    }
+
+    @-webkit-keyframes effect-anim-2 {
+        0% {
+                    transform: scale3d(1.4, 1.4, 1);
+            -webkit-transform: scale3d(1.4, 1.4, 1);
+            
+        }
+        100% {
+                    transform: scale3d(3, 3, 1);
+            -webkit-transform: scale3d(3, 3, 1);
+            
+        }
+    }
+
+    @keyframes effect-anim-2 {
+        0% {
+                    transform: scale3d(1.4, 1.4, 1);
+            -webkit-transform: scale3d(1.4, 1.4, 1);
+            
+        }
+        100% {
+                    transform: scale3d(3, 3, 1);
+            -webkit-transform: scale3d(3, 3, 1);
+            
+        }
+    }
+
+    .animation-controll{
+                           animation-name: effect-anim-2, effect-anim-1;
+                   -webkit-animation-name: effect-anim-2, effect-anim-1;
+                    
+                       animation-duration: 1.2s;
+               -webkit-animation-duration: 1.2s;
+            
+                animation-iteration-count: 1;
+        -webkit-animation-iteration-count: 1; 
+        
+                animation-timing-function: ease-out;
+        -webkit-animation-timing-function: ease-out;
+        
+                      animation-fill-mode: forwards;
+              -webkit-animation-fill-mode: forwards;    
+    }
+
+    .effect-animation-before-and-after{
+        position: absolute;
+        top:50%;
+        left:50%;
+        .rem(margin,-50, 0, 0, -50);
+        .rem(width, 100);
+        .rem(height, 100);
+        border-radius: 50%;
+        content: '';
+        opacity: 0;
+        pointer-events: none;
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.2);
+    }
+
+    .animation-wrap{
+        display:none;
+        width:100%;
+        height:100%;
+        position: fixed;
+        .rem(top, 0);
+        .rem(left, 0);
+        background-color:rgba(10,10,10,0.6); 
+
+        .effect-animation{
+            position: relative;
+            display: inline-block;
+            width:100%;
+            height:100%;
+            .rem(padding, 0);
+            border: none;
+            background: none;
+            color: #286aab;
+            .rem(font-size, 28);
+            overflow: visible;
+
+            -webkit-transition: color 0.7s;
+                    transition: color 0.7s;
+                    
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+            &.animation-click{
+                outline: none;
+                color: #3c8ddc;
+
+                &::before{
+                    .animation-controll;
+                }
+                &::after{
+                    .animation-controll;
+
+                    -webkit-animation-delay: 0.6s;
+                            animation-delay: 0.6s;
+                }
+
+            }
+
+            i{
+                display: block;
+                margin: 0 auto;
+                .rem(margin-left, -70);
+                .rem(margin-top, -70);
+                .rem(width, 140);
+                .rem(height, 140);
+                .rem(border-radius, 90);
+                .rem(line-height, 190);
+                .rem(letter-spacing, 2);
+
+                border: 1px solid #fff;
+                .rem(border-width,2);
+                background-color: #19c566;
+                color: #fff;
+                .rem(font-size, 24);
+                position: absolute;
+                top:50%;
+                left:50%
+            }
+            
+            &::before{
+                .effect-animation-before-and-after
+            }
+            &::after{
+                .effect-animation-before-and-after
+            }
+        }
+    }
+
+    // assign animation End
+
+}

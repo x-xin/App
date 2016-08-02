@@ -1,0 +1,261 @@
+.topic-about{
+    background-color: #f4f4f4;
+    .lt-block{
+        .rem(padding, 0, 20);
+        background-color: #f4f4f4;
+    }
+
+
+    .wrap{
+        position: relative;
+        
+        .rem(padding, 80, 20,40);
+        .rem(margin-top, 60);
+        background-color: #e0f6ff;
+        
+        border:1px solid #00b7ff;
+        .border-radius(8);
+
+        h2{
+            .rem(width,140);
+            .rem(margin-left,-70);
+            padding:2px;
+            position: absolute;
+            .rem(top,-36);
+            left: 50%;
+            background-color: #fff;
+            border:1px solid #3ec4fa;
+            .rem(font-size,30);
+            .rem(height,66);
+            .rem(line-height,66);
+            color: #fffffe;
+            text-align: center;
+            .border-radius(50);
+
+            span{
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: #3ec4fa;
+                .border-radius(50);
+            }
+        }
+        >p{
+            position: relative;
+            i{
+                &:first-child{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                &:last-child{
+                    display: inline-block;
+                    .rem(margin-left,40);
+                    position: relative;
+                    top: 0px;
+                    right: 0px;
+                }
+            }
+        }
+    }
+    .lead{
+
+        p{
+            color: #008cc4;
+            .rem(font-size,28);
+            text-indent: 2em;
+        }
+
+    }
+
+    .time{
+        .rem(height,800);
+        position: relative;
+        .onePx{
+            position: absolute;
+            left: 50%;
+            .rem(height,600);
+            width: 1px;
+            background-color: #71d4fc;
+        }
+
+        .line{
+            position: absolute;
+            .rem(top,120);
+            left: 50%;
+            width: 20%;
+            height: 1px;
+            background-color: #ff5858;
+
+            &.line1{
+                left: 30%;
+            }
+
+            &.line2{
+                .rem(top,260);
+                background-color:#ff930f;
+            }
+
+            &.line3{
+               .rem(top,405); 
+               left: 30%;
+               background-color:#d879ff;
+            }
+            &.line4{
+               .rem(top,545); 
+               background-color:#29cf30;
+            }
+            &.line5{
+               .rem(top,690); 
+               left: 30%;
+               background-color: #00b7ff;
+            }
+        }
+
+        .spot{
+            // .rem(width,10);
+            // .rem(height,10);
+            width: 10px;
+            height: 10px;
+            background-color: #ff5858;
+            position: absolute;
+            .rem(top,103);
+            left: 50%;
+            // .rem(margin-left,-10);
+            margin-left: -10px;
+            border-radius:100%;
+            border:5px solid #fff;
+
+            &.spot2{
+                .rem(top,241);
+                background-color:#ff930f;
+            }
+            &.spot3{
+                .rem(top,389);
+                background-color:#d879ff;
+            }
+            &.spot4{
+                .rem(top,527);
+                background-color:#29cf30;
+            }
+            &.spot5{
+                .rem(top,673);
+                background-color: #00b7ff;
+            }
+        }
+
+        .circle{
+            // .rem(margin-left,-250);
+            margin-left: 18%;
+            .rem(margin-bottom,20);
+            position: relative;
+            left: 50%;
+            .rem(height,120);
+            .rem(width,120);
+            .border-radius(60);
+            border: 1px solid #ff5858;
+
+
+            span{
+                display: block;
+                position: absolute;
+            }
+
+            .date{
+                .rem(width,156);
+                text-align: center;
+                .rem(line-height,36);
+                border:1px solid #ff5858;
+                .rem(font-size,26);
+                .border-radius(3);
+                .rem(top,20);
+                .rem(left,-18);
+                color: #ff5858;
+                background-color: #fff;
+            }
+            .mess{
+                .rem(width,200);
+                .rem(top,70);
+                .rem(left,-40);
+                text-align: center;
+                .rem(font-size,28);
+                color: #ff5858;
+                background-color: #e0f6ff;
+                font-weight: 600;
+            }
+
+            &.circle1,&.circle3,&.circle5{
+                .rem(margin-left,-120);
+                left: 30%;
+            }
+
+            &.circle2{
+                border: 1px solid #ff930f;
+                .mess{
+                    color: #ff930f;
+                }
+                .date{
+                    color: #ff930f;
+                    border: 1px solid #ff930f;
+                }
+            }
+
+            &.circle3{
+                border: 1px solid #d879ff;
+                .mess{
+                    color: #d879ff;
+                }
+                .date{
+                    color: #d879ff;
+                    border: 1px solid #d879ff;
+                }
+            }
+            &.circle4{
+                border: 1px solid #29cf30;
+                .mess{
+                    color: #29cf30;
+                }
+                .date{
+                    color: #29cf30;
+                    border: 1px solid #29cf30;
+                }
+            }
+            &.circle5{
+                border: 1px solid #00b7ff;
+                .mess{
+                    color: #00b7ff;
+                }
+                .date{
+                    color: #00b7ff;
+                    border: 1px solid #00b7ff;
+                }
+            }
+        }
+
+        .dash{
+            position: absolute;
+            .rem(top,620);
+            left: 50%;
+            margin-left: -1px;
+            width: 20%;
+            .rem(height,50);
+            border-left: 1px dashed #71d4fc;
+        }
+
+    }
+
+    .pc{
+        .rem(padding, 40,20);
+        .rem(margin,40,0,40);
+        background-color: #f4f4f4;
+        border:2px solid #00b7ff;
+        span{
+            display: block;
+            text-align: center;
+            color: #00b7ff;
+            .rem(font-size,26);
+            .rem(line-height,50);
+        }
+
+    }
+}

@@ -1,0 +1,86 @@
+.topic-article-list{
+    // background-color: #fff;
+    .tabs{
+        .rem(height,88);
+        .rem(line-height,88);
+        .rem(font-size,30);
+        color: #666;
+        border: 1px solid #e9e9e9;
+        background-color: #fff;
+        span{
+            display: inline-block;
+            width: 50%;
+            text-align: center;
+            .fn-left();
+            a{
+                display: inline-block;
+                .rem(line-height,82);
+                .rem(padding,0,20);
+                &:active{
+                    color: #00b7ff;
+                }
+            }
+            &.cur{
+                a{
+                    border-bottom: 3px solid #00b7ff;
+                    color: #00b7ff;
+                }
+            }
+        }
+    }
+    .all{
+        text-align: center;
+        .rem(line-height,70);
+        color: #999;
+    }
+    
+    .none-article{
+        .rem(margin-top,300);
+        p{
+            text-align: center;
+            color: #666;
+            .rem(font-size,28);
+            .rem(line-height,50);
+        }
+    }
+    .article-list{
+        li{
+            background-color: #fff;
+            .rem(padding,20);
+            border-bottom: 1px solid #e9e9e9;
+
+            img{
+                .border-radius(8);
+                display: block;
+            }
+            h2{
+                .rem(margin,30,0,20);
+                color: #333;
+                .rem(font-size,30);
+                .rem(line-height,38);
+                .rem(max-height,76);
+                overflow: hidden;
+            }
+            span{
+                .rem(font-size,26);
+                color: #999;
+            }
+            p{
+                span{
+                    &:last-child{
+                        .fn-right();
+                    }
+                    &:first-child{
+                        display: inline-block;
+                        // .rem(max-width,480);
+                        max-width: 70%;
+
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow:ellipsis;
+                    }
+                }
+            }
+        }
+    }
+}

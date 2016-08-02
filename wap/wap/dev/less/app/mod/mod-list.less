@@ -1,0 +1,75 @@
+.mod-list{
+    
+
+    .item{
+        .rem(padding, 20,0);
+        position: relative;
+        .fn-clear();
+        border-bottom: 1px solid #e9e9e9;
+
+        .thumb{
+            .fn-left();
+            .rem(width,260);
+            .rem(margin, 0,20);
+
+        }
+        .main{
+            h2{
+                .rem(max-height,80);
+                .rem(line-height,40);
+
+                .rem(margin, -7,20,0);
+
+                .rem(font-size,30);
+                overflow: hidden;
+            }
+        }
+        .mess{
+            width: 100%;
+            .rem(height,33);
+            .rem(line-height,33);
+            position: absolute;
+            .rem(bottom,26);
+            left: 0px;
+            span{
+                .rem(font-size,26);
+                .rem(line-height,36);
+                color: #666666;
+                &.source{
+                    .rem(padding-left,300);
+                    display: inline-block;
+                    .rem(max-width,232);
+                    .rem(max-height,40);
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow:ellipsis;
+                }
+                &.source-color{
+                    
+                }
+                &.date{
+                    .fn-right();
+                    .rem(padding-right,20);
+                }
+            }
+        }
+        &.item-none-pic{
+            .main{
+                h2{
+                    .rem(margin-top, 0);
+                }
+            }
+            .mess{
+                position: static;
+                .rem(margin-top,30);
+
+                span{
+                  &.source{
+                        .rem(padding-left,20);
+                        .rem(max-width,512);
+                    }  
+                }
+            }
+        }
+    }
+}

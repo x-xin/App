@@ -1,0 +1,84 @@
+.topic-article{
+
+    .lt-block{
+        padding: 0;
+        background-color: #fff;
+    }
+
+    .art-menu{
+        display: block;
+        .rem(min-height,400);
+        .rem(padding,10,0,20);
+        border-bottom: 10px solid #f4f4f4;
+        li{
+            .fn-left();
+            width: 33.33%;
+            .rem(height,180);
+            .rem(margin,15,0);
+            position: relative;
+
+            a{
+                display: block;
+                .rem(padding-top,130);
+                position: relative;
+                width: 100%;
+                text-align: center;
+                .rem(font-size,24);
+                color: #666;
+                i{
+                    position: absolute;
+                    top: 0px;
+                    left: 50%;
+                    .rem(margin-left,-60);
+                }
+            }
+        }
+    }
+
+    .prize{
+        .rem(padding-top,3);
+        .rem(padding-bottom,40);
+    }
+
+    .wrap{
+        .rem(margin,62,20,0);
+
+        &.pc{
+            .rem(margin,40,20,0);
+            background-color: #fff;
+        }
+    }
+
+
+    .set,.standard{
+        h2{
+            .rem(width,308);
+            .rem(margin-left,-154);
+        }
+        p{
+            .rem(font-size,28);
+            color: #008cc4;
+            .rem(line-height,40);
+            .rem(margin-bottom,30);
+
+            &:last-child{
+                .rem(margin-bottom,0);
+            }
+            .red-col{
+                color: #ff314e;
+            }
+        }
+    }
+    .set{
+        position: relative;
+
+        .phone{
+            .rem(width,109);
+            .rem(height,186);
+            position: absolute;
+            .rem(top,40);
+            right: 2%;
+        }
+    }
+
+}

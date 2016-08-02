@@ -34,6 +34,10 @@
 						.rem(height, 66);
 						.rem(line-height, 66);
 						.rem(font-size, 30);
+						&.m-title{
+					    	.rem(line-height,36);
+					    	height: auto;
+					    }
 
 					}
 				}
@@ -41,7 +45,7 @@
 						border-style:solid;border-color:#ebebeb;
 						
 						.rem(border-width, 2);
-						.rem(padding, 30);
+						.rem(padding,8, 30);
 						.border-radius(10);
 						
 						[class^="icon"]{
@@ -54,8 +58,7 @@
 
 						.title{
 							color:#666;
-						    .rem(line-height, 40);
-
+						    // .rem(line-height, 40);
 						    .distance{
 						        float:right;
 						        .rem(margin-top, 0);
@@ -75,18 +78,39 @@
 							color:#666;
 							.rem(font-size, 20);
 							text-align: right;
+							&.distance-pos{
+								.rem(height, 30);
+								[class^=icon]{
+									position: absolute;
+									top: 0px;
+									left: 0px;
+								}
+								.distance-con{
+									position: relative;
+									float: right;
+									.rem(padding-left, 40);
+								}
+							}
 						}
 
 						.imgWrap{
 
 							figure{
 								width:30%;
+								.rem(height, 136);
+								position: relative;
 								&:nth-child(2){
 									margin:0 5%;
 								}
 
 								img{
 									width:100%;
+									&.small-img{
+									    position: absolute;
+									    top: 0px;
+									    left: 0px;
+									    z-index: 1;
+									}
 								}
 								float:left;
 							}

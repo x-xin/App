@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html lang="zh-lang">
+<head>
+    <meta charset="utf-8">
+    <title>旅游景点故事</title>
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="/wap/wap/dest/css/styles.css?v=222" media="all"/>
+    <script src="/wap/wap/dest/js/all.js"></script>
+</head> 
+<body class="topic-article-list">
+    <div class="tabs">
+        <span><a href="/wap/activity/article/lists.htm">全部</a></span>
+        <span class="cur"><a href="#">我的</a></span>
+    </div>
+
+    <!-- none article -->
+    
+     <div class="none-article" style="display:none;" id="j-none-article">
+        <p>请访问清新福建多语种门户网站进行投稿。</p>
+        <p>www.fjta.com</p>
+    </div> 
+    
+    <ul class="article-list" id="j-article-list">
+        <!-- <li>
+            <a href="#">
+                <img src="/wap/wap/dest/img/topic/topic-2.jpg" width="100%" height="100%">
+                <h2>碧海蓝天的漳州东山岛，你是否曾经留意过留意过？</h2>
+            </a>
+            <p><span>推荐对象：东山岛</span><span>福州</span></p>
+            <p><span>by：张三</span><span>2016-6-29</span></p>
+        </li>
+        <li>
+            <a href="#">
+                <img src="/wap/wap/dest/img/topic/topic-2.jpg" width="100%" height="100%">
+                <h2>碧海蓝天的漳州东山岛，你是否曾经留意过留意过？</h2>
+            </a>
+            <p><span>推荐对象：东山岛</span><span>福州</span></p>
+            <p><span>by：张三</span><span>2016-6-29</span></p>
+        </li>
+        <li>
+            <a href="#">
+                <img src="/wap/wap/dest/img/topic/topic-2.jpg" width="100%" height="100%">
+                <h2>碧海蓝天的漳州东山岛，你是否曾经留意过留意过？</h2>
+            </a>
+            <p><span>推荐对象：东山岛</span><span>福州</span></p>
+            <p><span>by：张三</span><span>2016-6-29</span></p>
+        </li>
+        <li>
+            <a href="#">
+                <img src="/wap/wap/dest/img/topic/topic-2.jpg" width="100%" height="100%">
+                <h2>碧海蓝天的漳州东山岛，你是否曾经留意过留意过？</h2>
+            </a>
+            <p><span>推荐对象：东山岛</span><span>福州</span></p>
+            <p><span>by：张三</span><span>2016-6-29</span></p>
+        </li>
+        <li>
+            <a href="#">
+                <img src="/wap/wap/dest/img/topic/topic-2.jpg" width="100%" height="100%">
+                <h2>碧海蓝天的漳州东山岛，你是否曾经留意过留意过？</h2>
+            </a>
+            <p><span>推荐对象：东山岛</span><span>福州</span></p>
+            <p><span>by：张三</span><span>2016-6-29</span></p>
+        </li> -->
+
+        <div id="listMain"></div>
+
+    </ul>
+    <div class="all" id="touchLoad" style="display:none">~~~~加载中~~~~</div>
+
+
+</body>
+</html>
+<script type="text/html" id="listTpl">
+    {{each data as item}}
+        <li>
+            <a href="{{item.url}}">
+                <img src="{{item.picture}}" width="100%" height="100%">
+                <h2>{{item.title}}</h2>
+            </a>
+            <p><span>推荐对象：{{item.object_name}}</span><span>{{item.zone_name}}</span></p>
+            <p><span>by：{{item.author}}</span><span>{{item.date}}</span></p>
+        </li>
+    {{/each}}
+</script>
+<script>
+     window.onload = function(){
+            
+            var isStop      =    false,
+                page        =    1,
+                sign   =    "";
+                noneArticle =    document.getElementById('j-none-article'),
+                listMain    =    document.getElementById('listMain'),
+                touchLoad   =    document.getElementById('touchLoad'),
+                append      =    function(el, html){
+                                    var divTemp  = document.createElement("div"),
+                                        nodes    = null,
+                                        fragment = document.createDocumentFragment();
+
+                                    divTemp.innerHTML = html;
+                                    nodes = divTemp.childNodes;
+                                    
+                                    for (var i=0, length=nodes.length; i<length; i+=1) {
+                                       fragment.appendChild(nodes[i].cloneNode(true));
+                                    }
+                                    
+                                    el.appendChild(fragment, el.firstChild);
+                                    
+                                    nodes    = null;
+                                    fragment = null;
+                                    return el;
+                                },
+                iosPostAndGet  =    function(parameter){
+                                        return document.location="objc://send:/" + parameter;
+                                    },
+                isIOS          =    navigator.userAgent.match('iPad')|| navigator.userAgent.match('iPhone')|| navigator.userAgent.match('iPod'),
+                jsBridge       =    JsBridge({
+                                        responseCallback:function(response){
+                                            // console.log(response);
+                                            sign = response.data.sign;
+                                            alert(sign+"刚出来的数据");
+
+                                            getData(); // ajax 
+
+                                        }
+                                    }),
+                sendToApp      =    function(){
+
+                                        if(isIOS){
+                                            iosPostAndGet('{"selector":"vote","userInfo":""}');
+                                        }else{
+                                            jsBridge.send('{"selector":"vote","userInfo":""}');
+                                        }
+                                        window.showMess = function(data){
+                                            jsBridge.show(data);
+                                        }
+
+                                    },
+                getAjax        =    function(fn){
+                                        if(isStop) {
+                                            touchLoad.innerHTML = "内容已全部加载!";
+                                            setTimeout(function(){
+                                                touchLoad.style.display = 'none';
+                                            }, 800);
+                                            return;
+                                        }
+                                        // console.log( isStop )
+                                        Ajax.request("/wap/article/ajax_my_lists", {
+                                            method: "get",
+                                            data:{
+                                                page        :    page++,
+                                                // type_name   :    typeName, //  
+                                                pageSize    :    5,     // 默认服务端设置10条,非必须
+                                                sign        :    sign    
+                                            },
+                                            success:function(xhr){
+                                                // console.log('success');
+                                                var data = JSON.parse(xhr.responseText),
+                                                    html = template('listTpl', data);
+
+                                                // console.log(1, data.data, isStop);
+                                                // console.log(data.code);
+
+                                                if( !data.data ){
+                                                    isStop = true;
+                                                } 
+
+                                                if(data.code == 2){
+                                                    noneArticle.style.display = 'block';
+                                                }
+
+                                                append(listMain, html);
+
+                                                if( fn ){
+                                                    fn();
+                                                }
+                                            },
+                                            failure:function(){
+                                                // console.log('failure');
+                                            },
+                                            before:function(xhr){
+                                                // console.log('before');
+                                            }
+                                        });
+                                    },
+                getData       =     function(){
+
+                                        getAjax(); // page = 1
+                                    
+                                        touchLoad.addEventListener('touchend', function(){
+                                            getAjax();
+                                        }, false);
+                                            
+                                        window.addEventListener('touchmove', function(e){
+                                            var windowScrollBottom = document.body.clientHeight - (window.innerHeight + document.body.scrollTop);
+                                            console.log( windowScrollBottom, !windowScrollBottom );
+                                            if( windowScrollBottom <= 0 ){
+                                                touchLoad.style.display = 'block';
+                                                setTimeout(function(){
+                                                    getAjax(function(){
+                                                        touchLoad.style.display = 'none';
+                                                        console.log('touchmove');
+                                                    });
+                                                }, 500);
+                                            }
+                                            
+                                        }, false);
+                                    }
+
+            sendToApp();
+        }
+
+</script>

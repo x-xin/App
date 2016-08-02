@@ -70,6 +70,23 @@
   opacity: @opacity;
 }
 
+/* scale */
+
+.scale(@x,@y){
+			transform:scale(@x,@y);
+		 -o-transform:scale(@x,@y); 
+		-ms-transform:scale(@x,@y);
+	   -moz-transform:scale(@x,@y);	
+	-webkit-transform:scale(@x,@y);    
+}
+.transform(@x){
+	transform:rotate(@x);
+	-ms-transform:rotate(@x); 	/* IE 9 */
+	-moz-transform:rotate(@x); 	/* Firefox */
+	-webkit-transform:rotate(@x); /* Safari 和 Chrome */
+	-o-transform:rotate(@x); 	/* Opera */
+}
+
 /* rem */
 @main-font-size: 16px;
 

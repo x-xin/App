@@ -11,6 +11,7 @@
 		.title{
 
 		    .rem(line-height, 40);
+		    position: relative;
 
 		    .signin{
 		        float:right;
@@ -19,9 +20,12 @@
 
 		        &.signined{
 
-		            position:relative;
-		            .rem(top, -20);
-		            .rem(left, 85);
+		            position:absolute;
+		            .rem(top, 0);
+		            z-index: 999;
+		            .rem(right, -85);
+
+		            .rem(line-height,40);
 
 		            .rem(padding, 5, 60);
 		            .rem(font-size, 20);
@@ -45,13 +49,13 @@
 
 		    &.comment{
 		        .rem(padding-left, 40);
-		        .rem(line-height, 90);
+		        .rem(line-height, 80);
 		        .rem(font-size, 28);
 		        position:relative;
 
 		        [class^="icon"]{
 		            position:absolute;
-		            .rem(top, 32);
+		            .rem(top, 26);
 		            .rem(left,0);
 		        }
 
