@@ -19,7 +19,7 @@
 						.rem(margin-left, 10);
 					}
 				}
-				.icon-dine{
+				>i{
 					position:absolute;left:0;left:0
 				}
 			}
@@ -27,7 +27,7 @@
 				display: block;
 				
 				.rem(margin, 16, 0, 28);
-				.rem(padding-left, 70);
+				.rem(padding, 0, 160,0,28);
 				.rem(height, 90);
 				.rem(line-height, 90);
 				.rem(font-size, 24);
@@ -36,6 +36,10 @@
 			    border-top: 1px solid #e9e9e9;
 
 			    position: relative;
+
+			    white-space: nowrap;
+			    text-overflow: ellipsis;
+			    overflow: hidden;
 
 			    [class$='distance']{
 			    	position: absolute;
@@ -47,6 +51,21 @@
 				    .rem(top, 30);
 				    .rem(right, 28);
 			    }
+			    [class$="guide"]{
+					.rem(left, 0);
+				}
+
+				>span{
+					position: absolute;
+					.rem(top, 0);
+					.rem(right, 28);
+					color: #00b7ff;
+					[class^="icon"]{
+					    position: relative;
+					    .rem(top,5);
+					    right: 0;
+					}
+				}
 			}
 			
 			.author{

@@ -1,0 +1,125 @@
+.page-about{
+    background-color: #f4f4f4;
+    .header{
+        height: 0;
+        padding-bottom:50%;
+        overflow: hidden; 
+        background: url(/static/wap/dest/img/default-img.png) 50% 33% no-repeat;
+        img{
+            display: block;
+        }
+    }
+    >a{
+        .fn-clear();
+        display: block;
+        .rem(margin,20,24,0);
+        background-color: #fff;
+        &:last-child{
+            .rem(margin-bottom,20);
+        }
+
+    }
+    .imgWrap{
+        .fn-left();
+        .rem(width,140);
+        .rem(height,140);
+        .rem(padding,20);
+        background: url(/static/wap/dest/img/default-img.png) 50% 33% no-repeat;
+        img{
+            display: block;
+        }
+    }
+    .textWrap{
+        .rem(margin-left,180);
+        .rem(padding,20);
+        .title{
+            .rem(font-size,30);
+            color: #333;
+            font-weight: bold;
+            .rem(line-height,44);
+        }
+        .text{
+            .rem(line-height,32);
+            .rem(font-size,24);
+            color: #666;
+        }
+    }
+
+    // deatil
+    .next{
+        .fn-clear();
+        border-top: 1px solid #e5e5e5; 
+        a{
+            display: block;
+            .rem(height,90);     
+            .rem(line-height,120);
+            &:first-child{
+                .fn-left();
+                .rem(font-size,30);
+                color: #333;
+            }
+            &:last-child{
+                .fn-right();
+                .rem(font-size,24);
+                color: #666;
+            }
+        }
+    }
+    .detailWrap{
+        .rem(margin,20,24);
+        .title{
+            .rem(font-size,36);
+            color: #333;
+            .rem(line-height,80);
+            font-weight: bold;
+        }
+        .subTitle{
+            .rem(margin-bottom,10);
+            .rem(font-size,28);
+            color: #333;
+            .rem(line-height,70);
+        }
+        p{
+            .rem(margin-bottom,30);
+            .rem(font-size,24);
+            .rem(line-height,34);
+            color: #666;
+        }
+        .onepic{
+            height: 0;
+            padding-bottom: 54.05%;
+            overflow: hidden;
+            background: url(/static/wap/dest/img/default-img.png) 50% 33% no-repeat;
+            img{display: block;}
+        }
+        .twopic{
+            .fn-clear();
+            margin-left: -1.2%;
+            margin-right: -1.2%;
+            em{
+                display: block;
+                .fn-left();
+                width: 47.6%;
+                margin: 0 1.2%;
+                height: 0;
+                padding-bottom: 46%;
+                background: url(/static/wap/dest/img/default-img.png) 50% 50% no-repeat;
+            }
+            img{display: block;}
+        }
+
+        .threepic{
+            .fn-clear();
+            em{
+                display: block;
+                .fn-left();
+                width: 31%;
+                margin: 0 1%;
+                height: 0;
+                padding-bottom: 31%;
+                background: url(/static/wap/dest/img/default-img.png) 50% 33% no-repeat;
+            }
+            img{display: block;}
+        }
+    }
+}

@@ -19,8 +19,15 @@ This is a project for mobile terminal.
     port: 80 ,
 ```
  
-### 自动化工具
-
-*  cd wap ;
-*  npm install ;
+### 开发自动化工具
 *  start run.bat ;
+
+### 测试环境
+*  cd App/wap/
+*  npm run lite 
+*  or http-server -a 0.0.0.0 -p 80
+
+### 测试数据
+*  /Data
+*  Mockjs 模拟
+

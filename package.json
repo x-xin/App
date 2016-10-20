@@ -1,6 +1,6 @@
 {
-    "name": "App",
-    "version": "0.1.0",
+    "name": "BenYouApp",
+    "version": "2.4",
     "scripts": {
         "start": "npm run lite",
         "lite": "lite-server",

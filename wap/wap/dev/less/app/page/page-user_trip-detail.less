@@ -2,6 +2,22 @@
 
     .distance{
         margin-top:0;
+        span{
+            .rem(line-height,32);
+            &.distance-icon{
+                i{
+                    .rem(top,-2);
+                }
+            }
+            &.prev-distance{
+                display: inline-block;
+                .rem(width,310);
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                float: left;
+            }
+        }
     }
 
     .lt-block{
@@ -15,12 +31,14 @@
     }
         .comment-icon{
             .fn-right();
-            .rem(padding, 0,24,0,10);
+            .rem(padding, 0,24,0,40);
             position: relative;
             .rem(right,-24);
+            top: 0;
             i{
-                position: relative;
-                .rem(top,6);
+                position: absolute;
+                .rem(top,0);
+                .rem(left,0);
             }
         }
     .day{
@@ -114,7 +132,7 @@
             } 
         }
     }
-    div[data-signin="true"]{
+    div[data-signin="1"]{
         .rem(width,128);
         .rem(height,128);
         .rem(line-height,160);
@@ -242,6 +260,7 @@
         .rem(top, 0);
         .rem(left, 0);
         background-color:rgba(10,10,10,0.6); 
+        z-index: 1500;
 
         .effect-animation{
             position: relative;

@@ -1,0 +1,65 @@
+.page-download{
+    background:#fed11c url("/static/wap/dest/img/download/bg.png") no-repeat 0 0;
+    background-size: 100% auto;
+
+    .logo,.phone{
+        width: 55%;
+        margin: 0 auto;
+    }
+    .logo{
+        width: 40%;
+        .rem(margin-top,80);
+        .rem(margin-bottom,50);
+    }
+    .phone{
+        .rem(margin-bottom,200);
+    }
+
+    .btn{
+        width: 100%;
+        .rem(padding-top,130);
+        z-index: 99;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        a{
+            display: block;
+            .rem(height,76);
+            .rem(padding-left,30);
+            width: 60%;
+            margin: 0 auto;
+            .rem(margin-bottom,30);
+            .rem(line-height,76);
+            text-align: center;
+            color: #fff;
+            .rem(font-size,30);
+            background-color: #06b9ff;
+            position: relative;
+            .border-radius(80);
+            i{
+                position: absolute;
+                .rem(top,8);
+                .rem(left,76);
+                transform: scale(.85);
+                -moz-transform: scale(.85);
+                -o-transform: scale(.85);
+                -webkit-transform: scale(.85);
+            }
+        }
+    }
+    h1{
+        width: 150%;
+        .rem(height,800);
+        .rem(line-height,168);
+        border-top-right-radius: 100%;
+        border-top-left-radius: 100%;
+        text-align: center;
+        color: #06b9ff;
+        .rem(font-size,30);
+        background-color: #fff;
+        position: absolute;
+        .rem(top,0);
+        left: -25%;
+    }
+}

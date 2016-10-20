@@ -37,7 +37,7 @@
 		}
 
 		.address{
-			.rem(padding-left, 40);
+			.rem(padding,0, 160,0,40);
 			.rem(height, 90);
 			.rem(line-height, 90);
 			.rem(font-size, 24);
@@ -46,6 +46,9 @@
 			border-top: 1px solid #e9e9e9;
 			position: relative;
 			color: #666666;
+			white-space: nowrap;
+		    text-overflow: ellipsis;
+		    overflow: hidden;
 
 			[class^="icon"]{
 				position: absolute;
@@ -56,8 +59,21 @@
 			[class$="distance"]{
 				.rem(left, 0);
 			}
+			[class$="guide"]{
+				.rem(left, 0);
+			}
 
-
+			>span{
+				position: absolute;
+				.rem(top, 0);
+				.rem(right, 28);
+				color: #00b7ff;
+				[class^="icon"]{
+				    position: relative;
+				    .rem(top,5);
+				    right: 0;
+				}
+			}
 		}
 
 		.equipmentlist{
@@ -99,6 +115,7 @@
 			.rem(height, 160);
 			position: relative;
 			border-bottom: 1px solid #e9e9e9;
+			overflow: hidden;
 
 			&:last-child{
 				.rem(padding-bottom, 0);
@@ -106,13 +123,22 @@
 			}
 
 			img{
-				height: 100%;
-				float: left;
+			    height: 100%;
+			    float: left;
+			}
+
+			.room-img{
+				.rem(height,160);
+				.rem(width,160);
+			    position: absolute;
+			    .rem(top,28);
+			    left: 0;
 			}
 
 			.info{
-				float: right;
-				.rem(width, 435);
+				float: left;
+				width: 60%;
+				.rem(margin-left,188);
 
 				dt{
 					.rem(line-height, 24);
@@ -124,6 +150,9 @@
 					.rem(padding-bottom, 40);
 					color:#999999;
 					.rem(font-size, 20);
+					white-space: nowrap;
+				    text-overflow: ellipsis;
+				    overflow: hidden;
 
 					&:last-child{
 						.rem(padding-bottom, 0);
@@ -179,15 +208,25 @@
 		    	}
 		    }
 		    &.swipe-wrap-spec{
-	    	    margin-top: -50%;
-			    margin-bottom: -50%;
+	    	    padding-bottom: 50%;
+			    height: 0;
+			    .u-img{
+			    	display: block;
+			    	height: 0;
+			    	padding-bottom: 50%;
+			    	position: relative;
+			    }
+			    img{
+			    	position: absolute;
+			    	top: -30%;
+			    }
 		    }
 		}
 	}
 
 	.swipe-nav{
 
-		.rem(margin-top, -40);
+		.rem(margin-top, -46);
 		position: absolute;
 		.rem(right, 28);
 		li{
@@ -201,6 +240,16 @@
 			&.on{
 				background-color: #fff;
 			}
+		}
+		em{
+			display: block;
+			.rem(margin-right,-18);
+			.rem(padding, 0, 15);
+		    .border-radius(40);
+		    background-color: rgba(0,0,0,.5);
+		    color: #fff;
+		    .rem(font-size, 20);
+		    .rem(line-height,40);
 		}
 	}
 

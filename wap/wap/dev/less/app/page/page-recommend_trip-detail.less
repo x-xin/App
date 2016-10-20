@@ -17,8 +17,7 @@
             left: 0;
         }
         h2{
-            width: 100%;            
-            .rem(height,122);
+            width: 100%;
             .rem(font-size,32);
             background-color: rgba(0, 0, 0, 0.5);
 
@@ -27,12 +26,15 @@
             bottom: 0;
 
             p{
-                .rem(height,44);
+                .rem(max-height,88);
+                .rem(line-height,44);                
                 overflow: hidden;
                 .rem(padding,25,24,0);
                 &:last-child{
                     .rem(height,30);
+                    .rem(line-height,30);                   
                     .rem(padding,8,24,0);
+                    .rem(margin-bottom,18);
                     .rem(font-size,20);
                 }
             }
@@ -46,11 +48,13 @@
             color: #333;
             .rem(font-size,36);
             .rem(line-height,110);
+            font-weight: normal;
         }
         p{
-            .rem(margin-bottom,25);
+            .rem(margin-bottom,22);
             color: #666;
             .rem(font-size,28);
+            .rem(line-height,36);
         }
     }
 
@@ -96,12 +100,22 @@
         position: relative;
         color: #666;
         .rem(font-size,28);
+        overflow: hidden;
     }
     .day{
+        padding: 0;
         h4{
-            .rem(margin-bottom,30);
+            .rem(padding,0,24);
+            .rem(height,88);
+            .rem(line-height,88);
             color: #0abaff;
             .rem(font-size,36);
+            background-color: #fff;
+            z-index: 1488;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-weight: normal;
             em{
                 .rem(font-size,40);
                 position: relative;
@@ -110,26 +124,31 @@
         }
         p{
             .rem(margin-bottom,30);
+            .rem(padding,0,24);
             color: #666;
             .rem(font-size,28);
-            &:last-child{
-               .rem(margin-bottom,0); 
-            }
-
         }  
     }
     .number{
+        border-top: none;
         h5{
             .rem(margin-right,120);
             overflow: hidden;
-            .rem(height,60);
+            .rem(height,51);
             .rem(font-size,32);
+            font-weight: normal;
+            a{
+                font-weight: normal; 
+                &:hover{
+                    color: #333;
+                }
+            }
 
             color: #333;
             i{
                 .rem(margin,0,20);
                 position: relative;
-                .rem(top,6);
+                .rem(top,7);
             }
         }
         span{
@@ -143,13 +162,17 @@
                 text-align: right;
                 i{
                     position: relative;
-                    .rem(top,6);
+                    .rem(top,4);
                     .rem(right,10);
                 }
             }
         }
         >p{
-            .rem(margin-bottom,30);
+            .rem(margin-bottom,22);
+            .rem(line-height,36);
+            &:first-child{
+                .rem(margin-top,26);
+            }
             &:last-child{
                 .rem(margin-bottom,0); 
             }
@@ -173,34 +196,45 @@
                     padding-bottom: 100%;
                     background: url(/static/wap/dest/img/default-img.png) 50% 50% no-repeat;
                     position: relative;
+                    overflow: hidden;
                     img{
                         display: block;
                         position: absolute;
                         top: 0;
                         left: 0;
+                        min-height: 100%;
                     }
                 }
             }
         }
-        .big-img{
-            display: block;
-            .rem(margin,30,0,20);
+        .u-img{
+            .rem(margin-bottom,20);
+            width: 100%;
+            height: 0;
+            padding-bottom: 66.66%;
+            overflow: hidden;
+            background: url(/static/wap/dest/img/default-img.png) 50% 50% no-repeat;
+            .big-img{
+                display: block;
+                .rem(margin,30,0,20);
+            }
         }
 
     .distance{
         color: #00b7ff;
         overflow: hidden;
         span{
-            .rem(line-height,80);
             &.distance-icon{
-                .rem(padding,0,30);
+                .rem(padding,0,30,0,40);
                 .fn-right();
                 position: relative;
                 .rem(right,-30);
+                top: 0;
                 
                 i{
-                    position: relative;
-                    .rem(top,6);
+                    position: absolute;
+                    .rem(top,4);
+                    left: 0;
                 }
             }
         }
